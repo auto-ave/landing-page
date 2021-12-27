@@ -4,20 +4,43 @@ import Image from "next/image";
 export default function WhyUs(){
     return (
         <>
-            <div className="container max-w-6xl p-5">
+            <div className="container max-w-7xl p-5">
                 <h2 className="text-3xl md:text-4xl lg:text-6xl">
                     You'll love <span className="text-primary">autoave</span>
                 </h2>
                 <div className="flex flex-wrap justify-between items-center">
                     {LANDING_WHY_US.map((item, index) => 
-                        <div className="md:flex-1 p-3" key={item.key}>
+                        <div className={`md:flex-1 p-3 max-w-xs mt-${item.marginTop}`} key={item.key}>
+                            <div className="mb-4 relative pt-56">
+                                <Image src={item.image} layout="fill" objectFit="contain" />
+                                <div className="icon-container absolute flex align-middle justify-center">
+                                    <Image src={item.icon} />
+                                </div>
+                            </div>
                             <div>
-                                <Image src={item.image} />
+                                <h5 className="text-2xl mb-2">
+                                    {item.title}
+                                </h5>
+                                <p className="">
+                                    {item.description}
+                                </p>
                             </div>
                         </div>
                     )}
                 </div>
             </div>
+            <style jsx>{`
+                .icon-container {
+                    position: absolute;
+                    top: -25px;
+                    right: -25px;
+                    background: white;
+                    border-radius: 50%;
+                    height: 50px;
+                    width: 50px;
+                    box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.25);
+                }
+            `}</style>
         </>
     )
 }

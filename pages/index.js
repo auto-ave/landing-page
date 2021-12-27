@@ -8,12 +8,16 @@ export default function Home() {
     return (
         <>
             <LandingNavbar />
-            <TopCTA />
-            <AboutUs />
-            <WhyUs />
-            <LandingFooter />
+            <div className="content">
+                <TopCTA />
+                <AboutUs />
+                <WhyUs />
+                <LandingFooter />
+            </div>
             <style jsx>{`
-
+                .content {
+                    margin-top: 80px;
+                }
             `}</style>
         </>
     )
