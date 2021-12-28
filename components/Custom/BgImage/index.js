@@ -20,6 +20,7 @@ import Image from "next/image"
  * @param { number } height - how tall the background image should be (default: 50vh)
  * @param { number } width - how wide image should be (default: 100%)
  * @param { string } tintOpacity - Add a black tint to the background image (default: 0)
+ * @param { boolean } priority - Us for LCP content (default: false)
  */
 const BgImage = ({
     alignItems = 'center',
@@ -28,7 +29,8 @@ const BgImage = ({
     imgsrc,
     justifyContent = 'center',
     width = '100%',
-    tintOpacity = "0"
+    tintOpacity = "0",
+    priority = false,
 }) => {
 
     return (
@@ -38,6 +40,7 @@ const BgImage = ({
                 src={imgsrc}
                 layout="fill"
                 objectFit="cover"
+                priority={priority}
             />
             {children &&
                 <div className="inner-container">

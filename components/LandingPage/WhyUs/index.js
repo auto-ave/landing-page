@@ -9,24 +9,27 @@ export default function WhyUs(){
                     You'll love <span className="text-primary">autoave</span>
                 </h2>
                 <div className="flex flex-wrap justify-between items-center">
-                    {LANDING_WHY_US.map((item, index) => 
-                        <div className={`md:flex-1 p-3 max-w-xs mt-${item.marginTop}`} key={item.key}>
-                            <div className="mb-4 relative pt-56">
-                                <Image src={item.image} layout="fill" objectFit="contain" />
-                                <div className="icon-container absolute flex align-middle justify-center">
-                                    <Image src={item.icon} />
+                    {LANDING_WHY_US.map((item, index) => {
+                        const className = `md:flex-1 p-3 max-w-xs mt-${item.marginTop}`
+                        return (
+                            <div className={className} key={item.key}>
+                                <div className="mb-4 relative pt-56">
+                                    <Image src={item.image} layout="fill" objectFit="contain" />
+                                    <div className="icon-container absolute flex align-middle justify-center">
+                                        <Image src={item.icon} />
+                                    </div>
+                                </div>
+                                <div>
+                                    <h5 className="text-2xl mb-2">
+                                        {item.title} 
+                                    </h5>
+                                    <p className="">
+                                        {item.description}
+                                    </p>
                                 </div>
                             </div>
-                            <div>
-                                <h5 className="text-2xl mb-2">
-                                    {item.title}
-                                </h5>
-                                <p className="">
-                                    {item.description}
-                                </p>
-                            </div>
-                        </div>
-                    )}
+                        )
+                    })}
                 </div>
             </div>
             <style jsx>{`
