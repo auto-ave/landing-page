@@ -21,6 +21,7 @@ import Image from "next/image"
  * @param { number } width - how wide image should be (default: 100%)
  * @param { string } tintOpacity - Add a black tint to the background image (default: 0)
  * @param { boolean } priority - Us for LCP content (default: false)
+ * @param { string } borderRadius - border radius of the container (default: 0px)
  */
 const BgImage = ({
     alignItems = 'center',
@@ -31,6 +32,7 @@ const BgImage = ({
     width = '100%',
     tintOpacity = "0",
     priority = false,
+    borderRadius = "0px",
 }) => {
 
     return (
@@ -54,6 +56,8 @@ const BgImage = ({
                     justify-content: ${justifyContent};
                     position: relative;
                     width: ${width};
+                    border-radius: ${borderRadius};
+                    overflow: hidden;
                 }
                 .outer-container:before {
                     content: '';

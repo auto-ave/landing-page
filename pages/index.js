@@ -1,8 +1,10 @@
 import AboutUs from "@components/LandingPage/AboutUs";
+import ContactUs from "@components/LandingPage/ContactUs";
+import GetTheApp from "@components/LandingPage/GetTheApp";
 import RegisterStore from "@components/LandingPage/RegisterStore";
 import TopCTA from "@components/LandingPage/TopCTA";
 import WhyUs from "@components/LandingPage/WhyUs";
-import LandingFooter from "@components/UI/LandingFooter/idnex";
+import LandingFooter from "@components/UI/LandingFooter";
 import LandingNavbar from "@components/UI/LandingNavbar";
 
 import { NextSeo } from "next-seo";
@@ -36,6 +38,8 @@ export default function Home() {
                 <AboutUs />
                 <WhyUs />
                 <RegisterStore />
+                <GetTheApp />
+                <ContactUs />
                 <LandingFooter />
             </div>
             <style jsx>{`
