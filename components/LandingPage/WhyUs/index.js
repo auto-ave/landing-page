@@ -6,7 +6,7 @@ export default function WhyUs(){
         <>
             <div className="container max-w-7xl p-5">
                 <h2 className="text-3xl md:text-4xl lg:text-6xl">
-                    You'll love <span className="text-primary">autoave</span>
+                    You&apos;ll love <span className="text-primary">autoave</span>
                 </h2>
                 <div className="flex flex-wrap justify-between items-center">
                     {LANDING_WHY_US.map((item, index) => {
@@ -14,9 +14,9 @@ export default function WhyUs(){
                         return (
                             <div className={className} key={item.key}>
                                 <div className="mb-4 relative pt-56">
-                                    <Image src={item.image} layout="fill" objectFit="contain" />
+                                    <Image src={item.image} layout="fill" objectFit="contain" alt={`why us ${index}`} />
                                     <div className="icon-container absolute flex align-middle justify-center">
-                                        <Image src={item.icon} />
+                                        <Image src={item.icon} alt={`Why us icon ${index}`} />
                                     </div>
                                 </div>
                                 <div>

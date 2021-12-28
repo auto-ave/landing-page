@@ -7,7 +7,7 @@ import BgImage from '@components/Custom/BgImage'
 export default function TopCTA(){
     return (
         <>
-            <BgImage imgsrc={background} className="cta-background" tintOpacity="0.8" priority={true}>
+            <BgImage imgsrc={background} imgalt={"Car Wash Background"} className="cta-background" tintOpacity="0.8" priority={true}>
                 <div className="container px-5 py-32 md:py-48 text-center">
                     <h1 className="text-white text-3xl md:text-5xl lg:text-7xl max-w-4xl mx-auto mb-3">
                         Giving your vehicle the <span className='text-secondary'>love</span> it deserves
@@ -18,10 +18,10 @@ export default function TopCTA(){
                     </p>
                     <div className='flex justify-center'>
                         <a href="" className='m-2'>
-                            <Image src={PlayStoreBadge} />
+                            <Image src={PlayStoreBadge} alt="Play Store Badge" />
                         </a>
                         <a href="" className='m-2'>
-                            <Image src={AppStoreBadge} />
+                            <Image src={AppStoreBadge} alt="App Store Badge" />
                         </a>
                         
                     </div>

@@ -21,7 +21,7 @@ export default function Navbar() {
             <div className="navbar p-5 backdrop-blur-xl">
                 <div className="flex flex-row justify-between items-center max-w-7xl mx-auto">
                     <div>
-                        <Image src={logo} alt="logo" />
+                        <Image src={logo} alt="Autoave Logo" />
                     </div>
                     <div className="flex">
                         <Link href="/">

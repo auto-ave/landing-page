@@ -10,7 +10,7 @@ export default function RegisterStore() {
                 <div className="flex items-center">
                     <div className="md:flex-1">
                         <div>
-                            <Image src={mancleaning} />
+                            <Image src={mancleaning} alt="Man Cleaning" />
                         </div>
                     </div>
                     <div className="md:flex-1">

@@ -22,7 +22,7 @@ export default function AboutUs(){
                     </div>
                     <div className="md:flex-1 p-3">
                         <div>
-                            <Image src={VehicleWashImage} />
+                            <Image src={VehicleWashImage} alt="Car Wash" />
                         </div>
                     </div>
                 </div>
