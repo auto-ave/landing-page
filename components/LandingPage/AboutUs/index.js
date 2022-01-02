@@ -12,7 +12,7 @@ export default function AboutUs(){
                             Your Wash <br />
                             On <span className="text-primary">Demand!</span>
                         </h2>
-                        <p>
+                        <p className="max-w-lg">
                             We are a platform that will ease the tedious process of waiting 
                             in queues at car care services. Consumers can pre-book their 
                             services according to the time and budget that suits their needs. 

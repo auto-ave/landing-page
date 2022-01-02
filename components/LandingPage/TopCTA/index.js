@@ -17,8 +17,7 @@ export default function TopCTA(){
                         Giving your vehicle the <span className='text-secondary'>love</span> it deserves
                     </h1>
                     <p className='text-white max-w-2xl mx-auto mb-7'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, morbi posuere 
-                        habitasse consequat neque a mauris vel leo. Vel dictum viverra tortor
+                        Choose from a variety of stores &amp; services and book according to your schedule. No more waiting in queues.
                     </p>
                     <div className='flex justify-center'>
                         <a href="" className='m-2'>
