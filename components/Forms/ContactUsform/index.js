@@ -27,7 +27,7 @@ export default function ContantUsForm() {
                         </div>
                     </div>
                     <div className="flex flex-wrap -mx-3">
-                        <div className="w-full px-3 text-center">
+                        <div className="w-full px-3 text-right">
                             <button className="flex-shrink-0 transition-all bg-primary hover:bg-secondary hover:text-black text-sm text-white py-3 px-5 rounded" type="button">
                                 Send Message
                             </button>

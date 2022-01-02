@@ -4,7 +4,7 @@ import scene from '@public/images/bangalore-scene.png'
 import BgImage from '@components/Custom/BgImage'
 import ContantUsForm from '@components/Forms/ContactUsform'
 
-export default function ContactUs(){
+export default function LandingContactUs(){
     return (
         <>
             <div className="outer-container">

@@ -1,8 +1,12 @@
+import Image from 'next/image'
+import BgImage from '@components/Custom/BgImage'
+
 import background from '@public/images/cta-background.webp'
 import PlayStoreBadge from '@public/images/play-store-badge.png'
 import AppStoreBadge from '@public/images/app-store-badge.png'
-import Image from 'next/image'
-import BgImage from '@components/Custom/BgImage'
+import AppScreen1 from '@public/images/autoave-app-1.png'
+import AppScreen2 from '@public/images/autoave-app-2.png'
+import AppScreen3 from '@public/images/autoave-app-3.png'
 
 export default function TopCTA(){
     return (
@@ -27,6 +31,17 @@ export default function TopCTA(){
                     </div>
                 </div>
             </BgImage>
+            <div className="app-showcase flex items-center justify-center">
+                <div className="image1">
+                    <Image src={AppScreen1} alt="Autoave App Screen" />
+                </div>
+                <div className="image2">
+                    <Image src={AppScreen2} alt="Autoave App Screen" />
+                </div>
+                <div className="image3">
+                    <Image src={AppScreen3} alt="Autoave App Screen" />
+                </div>
+            </div>
             <style jsx>{`
                 .cta-background {
                     position: relative;
@@ -36,7 +51,29 @@ export default function TopCTA(){
                     background-repeat: no-repeat;
                     z-index: 3;
                 }
-                
+                .app-showcase {
+                    position: relative;
+                    top: -100px;
+                    z-index: 100;
+                }
+                .image1 {
+                    position: relative;
+                    top: 20px;
+                    left: 130px;
+                    transform: rotate(-15deg);
+                    animation-name: leftImage;
+                    animation-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+                    animation-duration: 1.4s;
+                }
+                .image3 {
+                    position: relative;
+                    top: 20px;
+                    right: 130px;
+                    transform: rotate(15deg);
+                    animation-name: rightImage;
+                    animation-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+                    animation-duration: 1.4s;
+                }
             `}</style>
         </>
     )
