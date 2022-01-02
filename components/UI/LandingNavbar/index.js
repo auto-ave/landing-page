@@ -20,7 +20,7 @@ export default function Navbar({ light }) {
     return (
         <>
             <div className={`navbar p-5 ${light ? 'backdrop-blur-3xl' : 'backdrop-blur-xl'}`}>
-                <div className="flex flex-row justify-between items-center max-w-7xl mx-auto">
+                <div className="flex flex-row justify-between items-center max-w-7xl mx-auto px-4">
                     <div>
                         <Link href={ROUTES.HOME}>
                             <a>
