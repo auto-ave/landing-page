@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function AboutUs(){
     return (
         <>
-            <div className="container max-w-7xl p-5">
+            <div className="container max-w-7xl p-5 mb-5 md:mb-32">
                 <div className="flex flex-wrap justify-between items-center">
                     <div className="md:flex-1 p-3">
                         <h2 className="text-3xl md:text-4xl lg:text-6xl mb-5">

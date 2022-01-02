@@ -10,13 +10,12 @@ export default function WhyUs(){
                 </h2>
                 <div className="flex flex-wrap justify-between items-center">
                     {LANDING_WHY_US.map((item, index) => {
-                        const className = `md:flex-1 p-3 max-w-xs mt-${item.marginTop}`
                         return (
-                            <div className={className} key={item.key}>
+                            <div className={`md:flex-1 p-3 max-w-xs`} key={item.key} style={{ marginTop: `${item.marginTop}rem` }}>
                                 <div className="mb-4 relative pt-56">
                                     <Image src={item.image} layout="fill" objectFit="contain" alt={`why us ${index}`} />
                                     <div className="icon-container absolute flex align-middle justify-center">
-                                        <Image src={item.icon} alt={`Why us icon ${index}`} />
+                                        <Image src={item.icon} alt={`Why us icon ${index}`} priority />
                                     </div>
                                 </div>
                                 <div>
