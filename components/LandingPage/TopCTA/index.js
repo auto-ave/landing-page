@@ -32,13 +32,13 @@ export default function TopCTA(){
             </BgImage>
             <div className="app-showcase flex items-center justify-center">
                 <div className="image1">
-                    <Image src={AppScreen1} alt="Autoave App Screen" />
+                    <Image src={AppScreen1} alt="Autoave App Screen" priority />
                 </div>
                 <div className="image2">
-                    <Image src={AppScreen2} alt="Autoave App Screen" />
+                    <Image src={AppScreen2} alt="Autoave App Screen" priority />
                 </div>
                 <div className="image3">
-                    <Image src={AppScreen3} alt="Autoave App Screen" />
+                    <Image src={AppScreen3} alt="Autoave App Screen" priority />
                 </div>
             </div>
             <style jsx>{`
@@ -63,6 +63,7 @@ export default function TopCTA(){
                     animation-name: leftImage;
                     animation-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
                     animation-duration: 1.4s;
+                    animation-delay: 2s;
                 }
                 .image3 {
                     position: relative;
@@ -72,6 +73,23 @@ export default function TopCTA(){
                     animation-name: rightImage;
                     animation-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
                     animation-duration: 1.4s;
+                    animation-delay: 2s;
+                }
+                @media(max-width: 768px) {
+                    .image1 {
+                        left: 90px;
+                    }
+                    .image3 {
+                        right: 90px;
+                    }
+                }
+                @media(max-width: 550px) {
+                    .image1 {
+                        left: 50px;
+                    }
+                    .image3 {
+                        right: 50px;
+                    }
                 }
             `}</style>
         </>

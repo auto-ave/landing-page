@@ -1,0 +1,1 @@
+export const STORE_CONNECT_GOOGLE_FORM = "https://forms.gle/opHxkjHScfeYUUZZA"

@@ -29,8 +29,8 @@ export default function Navbar({ light }) {
                         </Link>
                     </div>
                     <div className="flex">
-                        <Link href={ROUTES.HOME}>
-                            <a className="navbar-item text-primary">
+                        <Link href={ROUTES.HOME} >
+                            <a className="navbar-item text-primary hidden md:block">
                                 Home
                             </a>
                         </Link>

@@ -1,18 +1,24 @@
 import { LANDING_WHY_US } from "@utils/contants/landing_page";
+import useWindowSize from "hooks/useWindowSize";
 import Image from "next/image";
 
 export default function WhyUs(){
+    const windowSize = useWindowSize()
     return (
         <>
             <div className="outer-container">
                 <div className="container max-w-7xl p-5">
-                    <h2 className="text-3xl md:text-4xl lg:text-6xl">
+                    <h2 className="text-3xl md:text-4xl lg:text-6xl mb-8 md:mb-2">
                         You&apos;ll love <span className="text-primary">autoave</span>
                     </h2>
                     <div className="flex flex-wrap justify-center md:justify-between items-center">
                         {LANDING_WHY_US.map((item, index) => {
                             return (
-                                <div className={`md:flex-1 p-3 max-w-xs`} key={item.key} style={{ marginTop: `${item.marginTop}rem` }}>
+                                <div 
+                                    className={`md:flex-1 p-3 max-w-xs`} 
+                                    key={item.key} 
+                                    style={windowSize > 992 ? { marginTop: `${item.marginTop}rem` } : {}}
+                                >
                                     <div className="mb-4 relative pt-56">
                                         <Image src={item.image} layout="fill" objectFit="contain" alt={`why us ${index}`} />
                                         <div className="icon-container absolute flex align-middle justify-center">
