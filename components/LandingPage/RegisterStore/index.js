@@ -8,7 +8,7 @@ export default function RegisterStore() {
     return (
         <>
             <div className="container max-w-7xl p-5 py-32">
-                <div className="flex flex-wrap items-center">
+                <div className="flex flex-wrap md:flex-nowrap items-center justify-center">
                     <div className="">
                         <div>
                             <Image src={mancleaning} alt="Man Cleaning" />
