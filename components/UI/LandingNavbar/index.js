@@ -24,7 +24,7 @@ export default function Navbar({ light }) {
                     <div>
                         <Link href={ROUTES.HOME}>
                             <a>
-                                <Image src={logo} alt="Autoave Logo" />
+                                <Image src={logo} alt="Autoave Logo" priority />
                             </a>
                         </Link>
                     </div>

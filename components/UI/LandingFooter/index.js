@@ -12,7 +12,7 @@ export default function LandingFooter() {
                         <div className="flex flex-wrap justify-center md:justify-between items-center">
                             <div className='mb-4 md:mb-0'>
                                 <a href={ROUTES.HOME}> 
-                                    <Image src={logo} alt="Autoave Logo" />
+                                    <Image src={logo} alt="Autoave Logo" priority />
                                 </a>
                             </div>
                             <div className="flex flex-wrap justify-center">

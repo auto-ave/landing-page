@@ -21,10 +21,10 @@ export default function TopCTA(){
                     </p>
                     <div className='flex justify-center'>
                         <a href="" className='m-2'>
-                            <Image src={PlayStoreBadge} alt="Play Store Badge" />
+                            <Image src={PlayStoreBadge} alt="Play Store Badge" priority />
                         </a>
                         <a href="" className='m-2'>
-                            <Image src={AppStoreBadge} alt="App Store Badge" />
+                            <Image src={AppStoreBadge} alt="App Store Badge" priority />
                         </a>
                         
                     </div>

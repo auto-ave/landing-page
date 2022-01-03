@@ -11,7 +11,7 @@ export default function RegisterStore() {
                 <div className="flex flex-wrap md:flex-nowrap items-center justify-center">
                     <div className="">
                         <div>
-                            <Image src={mancleaning} alt="Man Cleaning" />
+                            <Image src={mancleaning} alt="Man Cleaning" priority />
                         </div>
                     </div>
                     <div className="p-8 md:p-16">
@@ -20,7 +20,7 @@ export default function RegisterStore() {
                                 Register your store on <span className="text-primary">Autoave</span> for free
                             </h4>
                             <div className="">
-                                <a href={STORE_CONNECT_GOOGLE_FORM} target="_blank">
+                                <a href={STORE_CONNECT_GOOGLE_FORM} target="_blank" rel="noreferrer">
                                     <button className="flex-shrink-0 transition-all bg-primary hover:text-white text-sm text-white py-3 px-5 rounded " style={{ background: "radial-gradient(178.69% 362.78% at 107.07% -9.42%, #003676 0%, #A0CCFF 100%)" }}>
                                         Register Store
                                     </button>
