@@ -20,7 +20,7 @@ export default function WhyUs(){
                                     style={windowSize.width > 992 ? { marginTop: `${item.marginTop}rem` } : {}}
                                 >
                                     <div className="mb-4 relative pt-56">
-                                        <Image src={item.image} layout="fill" objectFit="contain" alt={`why us ${index}`} priority />
+                                        <Image src={item.image} layout="fill" objectFit="contain" alt={item.title} priority />
                                         <div className="icon-container absolute flex align-middle justify-center">
                                             <Image src={item.icon} alt={`Why us icon ${index}`} priority />
                                         </div>
