@@ -15,6 +15,7 @@ export default function Home() {
             <NextSeo
                 title="Autoave - Online Car Care Service Booking"
                 description="Simplifying the way you take care of your car. We providing a wide range of store and service options to choose. No more queues now, choose timings according to your convenience."
+                tags="Autoave, Car Care"
                 canonical="https://www.autoave.in/"
                 openGraph={{
                     url: 'https://www.autoave.in/',
@@ -31,6 +32,10 @@ export default function Home() {
                     ],
                     site_name: 'Autoave',
                 }}
+                additionalMetaTags={[{
+                    name: 'keywords',
+                    content: 'Autoave, Car Wash, Book Car Wash, Car Care, Car Wash in Banglore'
+                }]}
             />
             <LandingNavbar />
             <div className="content">

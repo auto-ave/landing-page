@@ -60,20 +60,26 @@ export default function TopCTA(){
                     top: 20px;
                     left: 130px;
                     transform: rotate(-15deg);
-                    animation-name: leftImage;
-                    animation-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
-                    animation-duration: 1.4s;
-                    animation-delay: 2s;
                 }
                 .image3 {
                     position: relative;
                     top: 20px;
                     right: 130px;
                     transform: rotate(15deg);
-                    animation-name: rightImage;
-                    animation-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
-                    animation-duration: 1.4s;
-                    animation-delay: 2s;
+                }
+                @media(min-width: 992px) {
+                    .image1 {
+                        animation-name: leftImage;
+                        animation-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+                        animation-duration: 1.4s;
+                        animation-delay: 2s;
+                    }
+                    .image3 {
+                        animation-name: rightImage;
+                        animation-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+                        animation-duration: 1.4s;
+                        animation-delay: 2s;
+                    }
                 }
                 @media(max-width: 768px) {
                     .image1 {
