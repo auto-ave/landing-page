@@ -17,7 +17,7 @@ export default function TopCTA(){
                         habitasse consequat neque a mauris vel leo. Vel dictum viverra tortor
                     </p>
                     <div className='flex justify-center'>
-                        <a href="" className='m-2'>
+                        <a href="https://play.google.com/store/apps/details?id=com.autoave.app" className='m-2' target="_blank" rel="noreferrer">
                             <Image src={PlayStoreBadge} alt="Play Store Badge" />
                         </a>
                         <a href="" className='m-2'>
