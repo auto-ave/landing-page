@@ -11,3 +11,25 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     color: black;
 }
+
+@keyframes rightImage {
+    0% {
+        transform: rotate(0deg);
+        right: 210px;
+    }
+    100% {
+        transform: rotate(15deg);
+        right: 130px;
+    }
+}
+
+@keyframes leftImage {
+    0% {
+        transform: rotate(0deg);
+        left: 210px;
+    }
+    100% {
+        transform: rotate(-15deg);
+        left: 130px;
+    }
+}

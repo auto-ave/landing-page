@@ -13,7 +13,7 @@ export const LANDING_WHY_US = [
         'description': 'Book services according to your schedule with zero wait time.',
         'image': queuesImage,
         'icon': clockIcon,
-        'marginTop': '11',
+        'marginTop': '12',
     },
     {
         'key': 'whyus2',
@@ -21,7 +21,7 @@ export const LANDING_WHY_US = [
         'description': 'Choose from a variety of stores and services near you, select the store which suits you best.',
         'image': diverseOptionsImage,
         'icon': tagsIcon,
-        'marginTop': '15',
+        'marginTop': '6',
     },
     {
         'key': 'whyus3',
@@ -29,6 +29,6 @@ export const LANDING_WHY_US = [
         'description': 'Our best in class feedback system makes the service provider work efficiently and accurately.',
         'image':customerSatisfactionImage,
         'icon': smileIcon,
-        'marginTop': '10',
+        'marginTop': '0',
     },
 ]

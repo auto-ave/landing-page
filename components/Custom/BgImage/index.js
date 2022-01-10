@@ -42,7 +42,7 @@ const BgImage = ({
                 src={imgsrc}
                 layout="fill"
                 objectFit="cover"
-                priority={priority}
+                priority
             />
             {children &&
                 <div className="inner-container">

@@ -2,8 +2,9 @@ import Image from "next/image"
 import logo from '@public/logo.png'
 import Link from "next/link"
 import React from "react"
+import ROUTES from "@utils/routes";
 
-export default function Navbar() {
+export default function Navbar({ light }) {
     const [scrollPosition, setScrollPosition] = React.useState(0);
     const handleScroll = () => {
         const position = window.pageYOffset;
@@ -18,23 +19,26 @@ export default function Navbar() {
     }, [])
     return (
         <>
-            <div className="navbar p-5 backdrop-blur-xl">
-                <div className="flex flex-row justify-between items-center max-w-7xl mx-auto">
+            <div className={`navbar p-5 ${light ? 'backdrop-blur-3xl' : 'backdrop-blur-xl'}`}>
+                <div className="flex flex-row justify-between items-center max-w-7xl mx-auto px-4">
                     <div>
-                        <Image src={logo} alt="Autoave Logo" />
+                        <Link href={ROUTES.HOME}>
+                            <a>
+                                <Image src={logo} alt="Autoave Logo" priority />
+                            </a>
+                        </Link>
                     </div>
                     <div className="flex">
-                        <Link href="/">
-                            <a className="navbar-item text-primary">
+                        <Link href={ROUTES.HOME} >
+                            <a className="navbar-item text-primary hidden md:block">
                                 Home
                             </a>
                         </Link>
-                        <div className="navbar-item">
-                            About
-                        </div>
-                        <div className="navbar-item">
-                            Contact Us
-                        </div>
+                        <Link href={ROUTES.CONTACT_US}>
+                            <a className="navbar-item text-primary">
+                                Contact Us
+                            </a>
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -46,7 +50,7 @@ export default function Navbar() {
                     left: 0;
                     right: 0;
                     width: 100%;
-                    z-index: 100;
+                    z-index: 1000;
                     transition: 0.5s;
                 }
                 .navbar-item {

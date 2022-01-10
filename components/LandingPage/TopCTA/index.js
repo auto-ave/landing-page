@@ -1,8 +1,12 @@
+import Image from 'next/image'
+import BgImage from '@components/Custom/BgImage'
+
 import background from '@public/images/cta-background.webp'
 import PlayStoreBadge from '@public/images/play-store-badge.png'
 import AppStoreBadge from '@public/images/app-store-badge.png'
-import Image from 'next/image'
-import BgImage from '@components/Custom/BgImage'
+import AppScreen1 from '@public/images/autoave-app-1.png'
+import AppScreen2 from '@public/images/autoave-app-2.png'
+import AppScreen3 from '@public/images/autoave-app-3.png'
 
 export default function TopCTA(){
     return (
@@ -13,20 +17,30 @@ export default function TopCTA(){
                         Giving your vehicle the <span className='text-secondary'>love</span> it deserves
                     </h1>
                     <p className='text-white max-w-2xl mx-auto mb-7'>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien, morbi posuere 
-                        habitasse consequat neque a mauris vel leo. Vel dictum viverra tortor
+                        Choose from a variety of stores &amp; services and book according to your schedule. No more waiting in queues.
                     </p>
                     <div className='flex justify-center'>
                         <a href="https://play.google.com/store/apps/details?id=com.autoave.app" className='m-2' target="_blank" rel="noreferrer">
-                            <Image src={PlayStoreBadge} alt="Play Store Badge" />
+                            <Image src={PlayStoreBadge} alt="Play Store Badge" priority />
                         </a>
                         <a href="" className='m-2'>
-                            <Image src={AppStoreBadge} alt="App Store Badge" />
+                            <Image src={AppStoreBadge} alt="App Store Badge" priority />
                         </a>
                         
                     </div>
                 </div>
             </BgImage>
+            <div className="app-showcase flex items-center justify-center">
+                <div className="image1">
+                    <Image src={AppScreen1} alt="Autoave App Screen" priority />
+                </div>
+                <div className="image2">
+                    <Image src={AppScreen2} alt="Autoave App Screen" priority />
+                </div>
+                <div className="image3">
+                    <Image src={AppScreen3} alt="Autoave App Screen" priority />
+                </div>
+            </div>
             <style jsx>{`
                 .cta-background {
                     position: relative;
@@ -36,7 +50,47 @@ export default function TopCTA(){
                     background-repeat: no-repeat;
                     z-index: 3;
                 }
-                
+                .app-showcase {
+                    position: relative;
+                    top: -100px;
+                    z-index: 100;
+                }
+                .image1 {
+                    position: relative;
+                    top: 20px;
+                    left: 130px;
+                    transform: rotate(-15deg);
+                    animation-name: leftImage;
+                    animation-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+                    animation-duration: 1.4s;
+                    animation-delay: 2s;
+                }
+                .image3 {
+                    position: relative;
+                    top: 20px;
+                    right: 130px;
+                    transform: rotate(15deg);
+                    animation-name: rightImage;
+                    animation-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+                    animation-duration: 1.4s;
+                    animation-delay: 2s;
+                }
+                @media(max-width: 768px) {
+                    .image1 {
+                        left: 90px;
+                    }
+                    .image3 {
+                        right: 90px;
+                    }
+                }
+                @media(max-width: 550px) {
+                    .image1 {
+                        left: 50px;
+                    }
+                    .image3 {
+                        right: 50px;
+                    }
+                }
             `}</style>
         </>
     )
