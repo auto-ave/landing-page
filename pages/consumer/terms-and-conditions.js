@@ -1,7 +1,9 @@
+import LandingContactUs from "@components/LandingPage/ContactUs";
+import LandingFooter from "@components/UI/LandingFooter";
 import Navbar from "@components/UI/LandingNavbar";
 import { NextSeo } from "next-seo";
 
-export default function TermsAndConditions() {
+export default function ConsumerTermsAndConditions() {
     return (
         <>
             <NextSeo
@@ -173,6 +175,8 @@ export default function TermsAndConditions() {
                 <ul><li>Via Email:  <a href="mailto:care@autoave.in" >care@autoave.in</a></li>
                 </ul>
             </div>
+            <LandingContactUs />
+            <LandingFooter />
         </>
     )
 }

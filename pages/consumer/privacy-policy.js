@@ -1,3 +1,5 @@
+import LandingContactUs from "@components/LandingPage/ContactUs";
+import LandingFooter from "@components/UI/LandingFooter";
 import Navbar from "@components/UI/LandingNavbar";
 import { NextSeo } from "next-seo";
 
@@ -159,6 +161,8 @@ export default function PrivacyPolicy() {
                 <ul><li>Via Email:  <a href="mailto:care@autoave.in" >care@autoave.in</a></li>
                 </ul>
             </div>
+            <LandingContactUs />
+            <LandingFooter />
         </>
     )
 }
