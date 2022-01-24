@@ -11,7 +11,7 @@ export default function RegisterStore() {
                 <div className="flex flex-wrap md:flex-nowrap items-center justify-center">
                     <div className="">
                         <div>
-                            <Image src={mancleaning} alt="Man Cleaning" priority />
+                            <Image src={mancleaning} alt="Man Cleaning" />
                         </div>
                     </div>
                     <div className="p-8 md:p-16">

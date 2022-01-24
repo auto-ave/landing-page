@@ -22,7 +22,7 @@ export default function WhyUs(){
                                     <div className="mb-4 relative pt-56">
                                         <Image src={item.image} layout="fill" objectFit="contain" alt={item.title} priority />
                                         <div className="icon-container absolute flex align-middle justify-center">
-                                            <Image src={item.icon} alt={`Why us icon ${index}`} priority />
+                                            <Image src={item.icon} alt={`Why us icon ${index}`} />
                                         </div>
                                     </div>
                                     <div>
