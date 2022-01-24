@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import scene from '@public/images/bangalore-scene.png'
+import scene from '@public/images/bangalore-scene.webp'
 import BgImage from '@components/Custom/BgImage'
 import ContantUsForm from '@components/Forms/ContactUsform'
 

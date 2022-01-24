@@ -1,6 +1,6 @@
-import queuesImage from '@public/images/no-more-queues.png';
-import diverseOptionsImage from '@public/images/man-cleaning.png';
-import customerSatisfactionImage from '@public/images/customer-satisfaction.png';
+import queuesImage from '@public/images/no-more-queues.webp';
+import diverseOptionsImage from '@public/images/man-cleaning.webp';
+import customerSatisfactionImage from '@public/images/customer-satisfaction.webp';
 
 import clockIcon from '@public/icons/clock.svg'
 import smileIcon from '@public/icons/smile.svg'

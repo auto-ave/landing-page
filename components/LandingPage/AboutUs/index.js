@@ -1,4 +1,4 @@
-import VehicleWashImage from '@public/images/vehicle-wash-1.png';
+import VehicleWashImage from '@public/images/vehicle-wash-1.webp';
 import Image from 'next/image';
 
 export default function AboutUs(){

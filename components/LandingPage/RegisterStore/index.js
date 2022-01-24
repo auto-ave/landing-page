@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import mancleaning from '@public/images/man-cleaning-2.png'
+import mancleaning from '@public/images/man-cleaning-2.webp'
 import ROUTES from "@utils/routes";
 import { STORE_CONNECT_GOOGLE_FORM } from "@utils/contants/general";
 

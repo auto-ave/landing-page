@@ -4,9 +4,9 @@ import BgImage from '@components/Custom/BgImage'
 import background from '@public/images/cta-background.webp'
 import PlayStoreBadge from '@public/images/play-store-badge.png'
 import AppStoreBadge from '@public/images/app-store-badge.png'
-import AppScreen1 from '@public/images/autoave-app-1.png'
-import AppScreen2 from '@public/images/autoave-app-2.png'
-import AppScreen3 from '@public/images/autoave-app-3.png'
+import AppScreen1 from '@public/images/autoave-app-1.webp'
+import AppScreen2 from '@public/images/autoave-app-2.webp'
+import AppScreen3 from '@public/images/autoave-app-3.webp'
 
 export default function TopCTA(){
     return (
