@@ -23,7 +23,7 @@ export default function TopCTA(){
                         <a href="https://play.google.com/store/apps/details?id=com.autoave.app" className='m-2' target="_blank" rel="noreferrer">
                             <Image src={PlayStoreBadge} alt="Play Store Badge" priority />
                         </a>
-                        <a href="" className='m-2'>
+                        <a href="https://apps.apple.com/in/app/autoave-car-care-made-simple/id1603915477" className='m-2' target="_blank" rel="noreferrer">
                             <Image src={AppStoreBadge} alt="App Store Badge" priority />
                         </a>
                         
