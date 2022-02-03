@@ -7,6 +7,7 @@ import AppStoreBadge from '@public/images/app-store-badge.png'
 import AppScreen1 from '@public/images/autoave-app-1.webp'
 import AppScreen2 from '@public/images/autoave-app-2.webp'
 import AppScreen3 from '@public/images/autoave-app-3.webp'
+import { APPSTORE_URL, PLAYSTORE_URL } from '@utils/contants/general'
 
 export default function TopCTA(){
     return (
@@ -20,13 +21,12 @@ export default function TopCTA(){
                         Choose from a variety of stores &amp; services and book according to your schedule. No more waiting in queues.
                     </p>
                     <div className='flex justify-center'>
-                        <a href="https://play.google.com/store/apps/details?id=com.autoave.app" className='m-2' target="_blank" rel="noreferrer">
+                        <a href={PLAYSTORE_URL} className='m-2' target="_blank" rel="noreferrer">
                             <Image src={PlayStoreBadge} alt="Play Store Badge" priority />
                         </a>
-                        <a href="https://apps.apple.com/in/app/autoave-car-care-made-simple/id1603915477" className='m-2' target="_blank" rel="noreferrer">
+                        <a href={APPSTORE_URL} className='m-2' target="_blank" rel="noreferrer">
                             <Image src={AppStoreBadge} alt="App Store Badge" priority />
                         </a>
-                        
                     </div>
                 </div>
             </BgImage>
