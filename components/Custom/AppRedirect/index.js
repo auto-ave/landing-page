@@ -9,8 +9,14 @@ function AppRedirect() {
     useEffect(() => {
         if (isAndroid) {
             window.location.href = PLAYSTORE_URL
+            setTimeout(() => {
+                window.location.href = '/'
+            }, 1500)
         } else if (isIOS) {
             window.location.href = APPSTORE_URL
+            setTimeout(() => {
+                window.location.href = '/'
+            }, 1500)
         } else {
             window.location.href = '/'
         }
