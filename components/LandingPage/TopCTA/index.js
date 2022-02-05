@@ -12,7 +12,7 @@ import { APPSTORE_URL, PLAYSTORE_URL } from '@utils/contants/general'
 export default function TopCTA(){
     return (
         <>
-            <BgImage imgsrc={background} imgalt={"Car Wash Background"} className="cta-background" tintOpacity="0.8" priority={true}>
+            <BgImage imgsrc={background} imgalt={"Car Wash Background"} className="cta-background" tintOpacity="0.65" priority={true}>
                 <div className="container px-5 py-32 md:py-48 text-center">
                     <h1 className="text-white text-3xl md:text-5xl lg:text-7xl max-w-4xl mx-auto mb-3">
                         Giving your vehicle the <span className='text-secondary'>love</span> it deserves
