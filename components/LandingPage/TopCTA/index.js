@@ -31,13 +31,13 @@ export default function TopCTA(){
                 </div>
             </BgImage>
             <div className="app-showcase flex items-center justify-center">
-                <div className="image1">
+                <div className="appimage image1">
                     <Image src={AppScreen1} alt="Autoave App Screen" priority />
                 </div>
-                <div className="image2">
+                <div className="appimage image2">
                     <Image src={AppScreen2} alt="Autoave App Screen" priority />
                 </div>
-                <div className="image3">
+                <div className="appimage image3">
                     <Image src={AppScreen3} alt="Autoave App Screen" priority />
                 </div>
             </div>
@@ -54,6 +54,10 @@ export default function TopCTA(){
                     position: relative;
                     top: -100px;
                     z-index: 100;
+                }
+                .appimage {
+                    cursor: pointer;
+                    transition: all 0.3s ease-in-out;
                 }
                 .image1 {
                     position: relative;
@@ -96,6 +100,15 @@ export default function TopCTA(){
                     .image3 {
                         right: 50px;
                     }
+                }
+                .image1:hover {
+                    transform: rotate(-15deg) translateY(-15px) scale(1.02);
+                }
+                .image2:hover {
+                    transform: translateY(-15px) scale(1.02);
+                }
+                .image3:hover {
+                    transform: rotate(15deg) translateY(-15px) scale(1.02);
                 }
             `}</style>
         </>

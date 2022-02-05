@@ -8,7 +8,7 @@ export default function LandingContactUs(){
     return (
         <>
             <div className="outer-container">
-                <div className="container md:max-w-7xl p-5">
+                <div className="container md:max-w-7xl p-5 py-16">
                     <div className="md:flex flex-wrap items-center w-100">
                         <div className='flex-1 mb-4 md:mb-0'>
                             <div className='md:max-w-lg'>
