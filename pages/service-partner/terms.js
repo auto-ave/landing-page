@@ -7,13 +7,13 @@ export default function PartnerTermsAndConditions() {
     return (
         <>
             <NextSeo
-                title="Terms and Conditions"
-                description="Simplifying the way you take care of your car. We providing a wide range of store and service options to choose. No more queues now, choose timings according to your convenience."
+                title="Terms and Conditions - Service Partner"
+                description="Service Partner Terms and Conditions at Autoave"
                 canonical="https://www.autoave.in/service-partner/terms"
                 openGraph={{
                     url: "https://www.autoave.in/service-partner/terms",
                     title: "Partner - Terms and Conditions",
-                    description: "Simplifying the way you take care of your car. We providing a wide range of store and service options to choose. No more queues now, choose timings according to your convenience.",
+                    description: "Service Partner Terms and Conditions at Autoave",
                     images: [
                         {
                             url: "https://www.autoave.in/autoave-banner.jpg",

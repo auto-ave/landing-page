@@ -7,13 +7,13 @@ export default function CookiePolicy() {
     return (
         <>
             <NextSeo
-                title="Cookie Policy"
-                description="Simplifying the way you take care of your car. We providing a wide range of store and service options to choose. No more queues now, choose timings according to your convenience."
+                title="Cookie Policy - Autoave"
+                description="Cookie Policy for Consumers at Autoave"
                 canonical="https://www.autoave.in/consumer/cookie-policy"
                 openGraph={{
                     url: 'https://www.autoave.in/consumer/cookie-policy',
-                    title: 'Cookie Policy',
-                    description: 'Simplifying the way you take care of your car. We providing a wide range of store and service options to choose. No more queues now, choose timings according to your convenience.',
+                    title: 'Cookie Policy - Autoave',
+                    description: 'Cookie Policy for Consumers at Autoave',
                     images: [
                         {
                             url: 'https://www.autoave.in/autoave-banner.jpg',
