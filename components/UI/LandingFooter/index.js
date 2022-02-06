@@ -3,6 +3,9 @@ import Image from 'next/image'
 import logo from '@public/logo.png'
 import ROUTES from '@utils/routes'
 import { FACEBOOK_URL, INSTAGRAM_URL, LINKEDIN_URL } from '@utils/contants/general'
+import facebookIcon from '@public/icons/facebook.svg'
+import instagramIcon from '@public/icons/instagram.svg'
+import linkedinIcon from '@public/icons/linkedin.svg'
 
 export default function LandingFooter() {
     return (
@@ -44,14 +47,14 @@ export default function LandingFooter() {
                                 &copy;2021 Autoave Private Limited. All rights reserved
                             </div>
                             <div className="flex">
-                                <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer">
-                                    <img src="/icons/instagram.svg" alt="Instagram" className="footer-icon" />
+                                <a href={INSTAGRAM_URL} target="_blank" rel="me noreferrer" className='footer-icon'>
+                                    <Image src={instagramIcon} alt="Instagram Icon" />
                                 </a>
-                                <a href={FACEBOOK_URL} target="_blank" rel="noreferrer">
-                                    <img src="/icons/facebook.svg" alt="Facebook" className="footer-icon" />
+                                <a href={FACEBOOK_URL} target="_blank" rel="me noreferrer" className='footer-icon'>
+                                    <Image src={facebookIcon} alt="Facebook Icon" />
                                 </a>
-                                <a href={LINKEDIN_URL} target="_blank" rel="noreferrer">
-                                    <img src="/icons/linkedin.svg" alt="Linkedin" className="footer-icon" />
+                                <a href={LINKEDIN_URL} target="_blank" rel="me noreferrer" className='footer-icon'>
+                                    <Image src={linkedinIcon} alt="Linkedin Icon" />
                                 </a>
                             </div>
                         </div>
