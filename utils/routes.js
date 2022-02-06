@@ -8,6 +8,7 @@ const ROUTES = {
     TERMS_AND_CONDITIONS: '/consumer/terms-and-conditions',
     PRIVACY_POLICY: '/consumer/privacy-policy',
     COOKIES_POLICY: '/consumer/cookie-policy',
+    REFUND_POLICY: '/consumer/refund-policy',
 
     PARTNER_TERMS_AND_CONDITIONS: '/service-partner/terms',
 

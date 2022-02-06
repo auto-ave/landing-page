@@ -2,6 +2,7 @@ import Image from 'next/image'
 
 import logo from '@public/logo.png'
 import ROUTES from '@utils/routes'
+import { FACEBOOK_URL, INSTAGRAM_URL, LINKEDIN_URL } from '@utils/contants/general'
 
 export default function LandingFooter() {
     return (
@@ -31,16 +32,27 @@ export default function LandingFooter() {
                                 <a href={ROUTES.PRIVACY_POLICY} className="footer-item">
                                     Privacy Policy
                                 </a>
+                                <a href={ROUTES.REFUND_POLICY} className="footer-item">
+                                    Refund Policy
+                                </a>
                             </div>
                         </div>
                     </div>
                     <div className='py-5'>
                         <div className="flex flex-row justify-between items-center">
                             <div>
-                                &copy; 2021 Autoave Private Limited All rights reserved
+                                &copy;2021 Autoave Private Limited. All rights reserved
                             </div>
                             <div className="flex">
-                                
+                                <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer">
+                                    <img src="/icons/instagram.svg" alt="Instagram" className="footer-icon" />
+                                </a>
+                                <a href={FACEBOOK_URL} target="_blank" rel="noreferrer">
+                                    <img src="/icons/facebook.svg" alt="Facebook" className="footer-icon" />
+                                </a>
+                                <a href={LINKEDIN_URL} target="_blank" rel="noreferrer">
+                                    <img src="/icons/linkedin.svg" alt="Linkedin" className="footer-icon" />
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -49,7 +61,9 @@ export default function LandingFooter() {
             <style jsx>{`
                 .footer-item {
                     padding: 0.5rem 1rem;
-                    
+                }
+                .footer-icon {
+                    margin: 5px;
                 }
             `}</style>
         </>

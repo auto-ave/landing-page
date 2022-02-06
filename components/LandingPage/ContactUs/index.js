@@ -11,7 +11,7 @@ export default function LandingContactUs(){
                 <div className="container md:max-w-7xl p-5 py-16">
                     <div className="md:flex flex-wrap items-center w-100">
                         <div className='flex-1 mb-4 md:mb-0'>
-                            <div className='md:max-w-lg'>
+                            <div className='md:max-w-lg mb-5'>
                                 <BgImage imgsrc={scene} imgalt="Autoave Logo" borderRadius="8px">
                                     <div className='pt-52'>
                                         <h3 className='text-white text-3xl p-5 tracking-tight'>
@@ -19,6 +19,16 @@ export default function LandingContactUs(){
                                         </h3>
                                     </div>
                                 </BgImage>
+                            </div>
+                            <div className='p-3'>
+                                <h6 className='mb-4 text-xl'> AUTOAVE PRIVATE LIMITED</h6>
+                                <p className='mb-3'>
+                                    No-42 ,4th Main, NGEF Layout, Postal Colony, Sanjaynagar,  Bangalore, Karnataka-560094
+                                </p>
+                                <p>
+                                    Email: <a href="mailto:care@autoave.in">care@autoave.in</a>
+                                </p>
+
                             </div>
                         </div>
                         <div className="flex-1 p-5 w-100">
