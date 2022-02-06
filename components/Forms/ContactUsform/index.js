@@ -52,7 +52,7 @@ export default function ContantUsForm() {
                             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="grid-last-name">
                                 Email
                             </label>
-                            <input className="appearance-none transition-all block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe" value={email} onChange={(event) => setEmail(event.target.value)} required />
+                            <input className="appearance-none transition-all block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="jane@example.com" value={email} onChange={(event) => setEmail(event.target.value)} required />
                         </div>
                     </div>
                     <div className="flex flex-wrap -mx-3 mb-4">

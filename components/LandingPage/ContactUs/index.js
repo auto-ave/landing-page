@@ -21,7 +21,7 @@ export default function LandingContactUs(){
                                 </BgImage>
                             </div>
                             <div className='p-3'>
-                                <h1 className='mb-4 text-xl'> AUTOAVE PRIVATE LIMITED</h1>
+                                <h3 className='mb-4 text-xl'> AUTOAVE PRIVATE LIMITED</h3>
                                 <p className='mb-3'>
                                     No-42 ,4th Main, NGEF Layout, Postal Colony, Sanjaynagar,  Bangalore, Karnataka-560094
                                 </p>
