@@ -7,12 +7,12 @@ export default function ContactUs(){
     return (
         <>
             <NextSeo
-                title="Contact Us - Autoave"
+                title="Contact Us | Autoave - Car care made simple"
                 description="Contact Us at Autoave - Simplifying the way you take care of your car."
                 canonical="https://www.autoave.in/contact-us"
                 openGraph={{
                     url: 'https://www.autoave.in/contact-us',
-                    title: 'Contact Us - Autoave',
+                    title: 'Contact Us | Autoave - Car care made simple',
                     description: 'Contact Us at Autoave - Simplifying the way you take care of your car.',
                     images: [
                         {
