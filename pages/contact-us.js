@@ -1,7 +1,11 @@
 import LandingContactUs from "@components/LandingPage/ContactUs";
 import LandingFooter from "@components/UI/LandingFooter";
 import Navbar from "@components/UI/LandingNavbar";
+import { FACEBOOK_APP_ID, FACEBOOK_URL, INSTAGRAM_URL, LINKEDIN_URL, SITE_URL } from "@utils/contants/general";
+
 import { NextSeo } from "next-seo";
+import { SocialProfileJsonLd } from 'next-seo';
+
 
 export default function ContactUs(){
     return (
@@ -25,6 +29,23 @@ export default function ContactUs(){
                     ],
                     site_name: 'Autoave',
                 }}
+                additionalMetaTags={[{
+                    name: 'keywords',
+                    content: 'Autoave, autoave contact us, Car Wash, Book Car Wash, Car Care, Car Wash in Banglore'
+                }]}
+                facebook={{
+                    appId: FACEBOOK_APP_ID,
+                }}
+            />
+            <SocialProfileJsonLd
+                type="Organization"
+                name="Autoave"
+                url={SITE_URL}
+                sameAs={[
+                    FACEBOOK_URL,
+                    INSTAGRAM_URL,
+                    LINKEDIN_URL
+                ]}
             />
             <div className="flex flex-col justify-between min-h-screen">
                 <Navbar />

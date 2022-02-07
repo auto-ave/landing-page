@@ -1,7 +1,11 @@
 import LandingContactUs from "@components/LandingPage/ContactUs";
 import LandingFooter from "@components/UI/LandingFooter";
 import Navbar from "@components/UI/LandingNavbar";
+import { FACEBOOK_APP_ID, FACEBOOK_URL, INSTAGRAM_URL, LINKEDIN_URL, SITE_URL } from "@utils/contants/general";
+
 import { NextSeo } from "next-seo";
+import { SocialProfileJsonLd } from 'next-seo';
+
 
 export default function ConsumerTermsAndConditions() {
     return (
@@ -25,6 +29,23 @@ export default function ConsumerTermsAndConditions() {
                     ],
                     site_name: "Autoave",
                 }}
+                facebook={{
+                    appId: FACEBOOK_APP_ID,
+                }}
+                additionalMetaTags={[{
+                    name: 'keywords',
+                    content: 'Autoave, Car Wash, Book Car Wash, Car Care, Car Wash in Banglore'
+                }]}
+            />
+            <SocialProfileJsonLd
+                type="Organization"
+                name="Autoave"
+                url={SITE_URL}
+                sameAs={[
+                    FACEBOOK_URL,
+                    INSTAGRAM_URL,
+                    LINKEDIN_URL
+                ]}
             />
             <Navbar light />
             <div className="container p-3 py-40">
