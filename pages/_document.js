@@ -1,4 +1,28 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
+import PropTypes from 'prop-types';
+
+class CustomNextScript extends NextScript {
+    static propTypes = {
+        /**
+         * Set to `defer` to use `defer` instead of `async` when rendering script elements.
+         */
+        mode: PropTypes.oneOf(['async', 'defer']),
+    }
+
+    static defaultProps = {
+        mode: 'async',
+    }
+
+    getScripts() {
+        return super.getScripts().map(script => {
+            return React.cloneElement(script, {
+                key: script.props.src,
+                defer: this.props.mode === 'defer' ? true : undefined,
+                async: this.props.mode === 'async' ? true : undefined,
+            })
+        })
+    }
+}
 
 class MyDocument extends Document {
     render() {
@@ -16,7 +40,7 @@ class MyDocument extends Document {
                 
                 <body className='text-sm md:text-base'>
                     <Main />
-                    <NextScript />
+                    <CustomNextScript mode="defer" />
                 </body>
             </Html>
         )
