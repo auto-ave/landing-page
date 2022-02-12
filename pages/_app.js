@@ -1,9 +1,31 @@
-import Script from 'next/script'
 import { DefaultSeo } from 'next-seo'
 
 import '/styles/global.css'
+import { useEffect } from 'react';
+
+import { useRouter } from 'next/dist/client/router';
+import MixpanelTracking from 'service/mixpanel';
+import { PAGE_VIEW } from '@utils/contants/tracking_events';
 
 function MyApp({ Component, pageProps }) {
+    const router = useRouter();
+
+    useEffect(() => {
+        const handleRouteChange = (url) => {
+            var mixpanel = MixpanelTracking.getInstance();
+            mixpanel.track(PAGE_VIEW)
+        };
+        router.events.on('routeChangeComplete', handleRouteChange);
+        return () => {
+            router.events.off('routeChangeComplete', handleRouteChange);
+        };
+    }, [router.events])
+
+    useEffect(() => {
+        var mixpanel = MixpanelTracking.getInstance();
+        mixpanel.track(PAGE_VIEW)
+    }, [])
+
     return (
         <>
             <DefaultSeo
@@ -17,19 +39,6 @@ function MyApp({ Component, pageProps }) {
                     cardType: 'summary_large_image',
                 }}
             />
-            <Script
-                src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
-                strategy="afterInteractive"
-            />
-            <Script id="google-analytics" strategy="afterInteractive">
-                {`
-                    window.dataLayer = window.dataLayer || [];
-                    function gtag(){window.dataLayer.push(arguments);}
-                    gtag('js', new Date());
-
-                    gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
-                `}
-            </Script>
             <Component {...pageProps} />
         </>
     )
