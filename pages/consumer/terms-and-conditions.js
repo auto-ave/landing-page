@@ -12,12 +12,12 @@ export default function ConsumerTermsAndConditions() {
         <>
             <NextSeo
                 title="Terms and Conditions - Autoave"
-                description="Consumers Terms and Conditions at Autoave"
+                description="Consumers Terms and Conditions at Autoave - Simplifying the way you take care of your car."
                 canonical="https://www.autoave.in/consumer/terms-and-conditions"
                 openGraph={{
                     url: "https://www.autoave.in/consumer/terms-and-conditions",
                     title: "Terms and Conditions - Autoave",
-                    description: "Consumers Terms and Conditions at Autoave",
+                    description: "Consumers Terms and Conditions at Autoave - Simplifying the way you take care of your car.",
                     images: [
                         {
                             url: "https://www.autoave.in/autoave-banner.jpg",

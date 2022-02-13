@@ -12,12 +12,12 @@ export default function PartnerTermsAndConditions() {
         <>
             <NextSeo
                 title="Terms and Conditions - Service Partner"
-                description="Service Partner Terms and Conditions at Autoave"
+                description="Service Partner's Terms and Conditions at Autoave - Simplifying the way you take care of your car."
                 canonical="https://www.autoave.in/service-partner/terms"
                 openGraph={{
                     url: "https://www.autoave.in/service-partner/terms",
                     title: "Partner - Terms and Conditions",
-                    description: "Service Partner Terms and Conditions at Autoave",
+                    description: "Service Partner's Terms and Conditions at Autoave - Simplifying the way you take care of your car.",
                     images: [
                         {
                             url: "https://www.autoave.in/autoave-banner.jpg",

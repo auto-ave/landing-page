@@ -12,12 +12,12 @@ export default function PrivacyPolicy() {
         <>
             <NextSeo
                 title="Privacy Policy - Autoave"
-                description="Privacy Policy for Consumers at Autoave"
+                description="Privacy Policy for Consumers at Autoave - Simplifying the way you take care of your car."
                 canonical="https://www.autoave.in/consumer/privacy-policy"
                 openGraph={{
                     url: 'https://www.autoave.in/consumer/privacy-policy',
                     title: 'Privacy Policy',
-                    description: 'Privacy Policy for Consumers at Autoave',
+                    description: 'Privacy Policy for Consumers at Autoave - Simplifying the way you take care of your car.',
                     images: [
                         {
                             url: 'https://www.autoave.in/autoave-banner.jpg',

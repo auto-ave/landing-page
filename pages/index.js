@@ -6,7 +6,7 @@ import TopCTA from "@components/LandingPage/TopCTA";
 import WhyUs from "@components/LandingPage/WhyUs";
 import LandingFooter from "@components/UI/LandingFooter";
 import LandingNavbar from "@components/UI/LandingNavbar";
-import { FACEBOOK_APP_ID, FACEBOOK_URL, INSTAGRAM_URL, LINKEDIN_URL, SITE_URL } from "@utils/contants/general";
+import { FACEBOOK_APP_ID, FACEBOOK_URL, INSTAGRAM_URL, LINKEDIN_URL, SITE_DESCRIPTION, SITE_URL } from "@utils/contants/general";
 
 import { NextSeo } from "next-seo";
 import { SocialProfileJsonLd } from 'next-seo';
@@ -16,13 +16,13 @@ export default function Home() {
         <>
             <NextSeo
                 title="Autoave - Online Car Care Service Booking"
-                description="Simplifying the way you take care of your car. We providing a wide range of store and service options to choose. No more queues now, choose timings according to your convenience."
+                description={SITE_DESCRIPTION}
                 tags="Autoave, Car Care"
                 canonical={SITE_URL}
                 openGraph={{
                     url: SITE_URL,
                     title: 'Autoave - Online Car Care Service Booking',
-                    description: 'Simplifying the way you take care of your car. We providing a wide range of store and service options to choose. No more queues now, choose timings according to your convenience.',
+                    description: SITE_DESCRIPTION,
                     images: [
                         {
                             url: 'https://www.autoave.in/autoave-banner.jpg',
@@ -39,7 +39,7 @@ export default function Home() {
                 }}
                 additionalMetaTags={[{
                     name: 'keywords',
-                    content: 'Autoave, Car Wash, Book Car Wash, Car Care, Car Wash in Banglore'
+                    content: 'Autoave, Autoave app, Car Wash, Online, Booking, Book Car Wash, Car Care, Car Wash in Banglore'
                 }]}
             />
             <SocialProfileJsonLd

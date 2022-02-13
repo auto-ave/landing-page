@@ -13,11 +13,14 @@ export default function AboutUs(){
                             On <span className="text-primary">Demand!</span>
                         </h2>
                         <p className="max-w-lg">
-                            We are a platform that will ease the tedious process of waiting 
-                            in queues at car care services. Consumers can pre-book their 
-                            services according to the time and budget that suits their needs. 
-                            We provide diverse options to choose vehicular services from 
-                            various stores; just like selecting meals in zomato.
+                            India's only platform where you can choose between various stores and 
+                            services to find what's best for your car. See pricing, images, 
+                            reviews, and ratings on our app before selecting the best service store for 
+                            your vehicle.
+                        </p>
+                        <p className="max-w-lg">
+                            No more waiting in queues to get your services done, pre-book a slot online 
+                            according to your schedule and get your services without any wait.
                         </p>
                     </div>
                     <div className="md:flex-1 p-3">

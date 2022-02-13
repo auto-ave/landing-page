@@ -12,12 +12,12 @@ export default function RefundPolicy() {
         <>
             <NextSeo
                 title="Refund Policy - Autoave"
-                description="Refund Policy for Consumers at Autoave"
+                description="Refund Policy for Consumers at Autoave - Simplifying the way you take care of your car."
                 canonical="https://www.autoave.in/consumer/refund-policy"
                 openGraph={{
                     url: 'https://www.autoave.in/consumer/refund-policy',
                     title: 'Refund Policy - Autoave',
-                    description: 'Refund Policy for Consumers at Autoave',
+                    description: 'Refund Policy for Consumers at Autoave - Simplifying the way you take care of your car.',
                     images: [
                         {
                             url: 'https://www.autoave.in/autoave-banner.jpg',

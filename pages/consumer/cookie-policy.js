@@ -12,12 +12,12 @@ export default function CookiePolicy() {
         <>
             <NextSeo
                 title="Cookie Policy - Autoave"
-                description="Cookie Policy for Consumers at Autoave"
+                description="Cookie Policy for Consumers at Autoave - Simplifying the way you take care of your car."
                 canonical="https://www.autoave.in/consumer/cookie-policy"
                 openGraph={{
                     url: 'https://www.autoave.in/consumer/cookie-policy',
                     title: 'Cookie Policy - Autoave',
-                    description: 'Cookie Policy for Consumers at Autoave',
+                    description: 'Cookie Policy for Consumers at Autoave - Simplifying the way you take care of your car.',
                     images: [
                         {
                             url: 'https://www.autoave.in/autoave-banner.jpg',
