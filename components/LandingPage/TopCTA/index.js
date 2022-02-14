@@ -8,8 +8,15 @@ import AppScreen1 from '@public/images/autoave-app-1.webp'
 import AppScreen2 from '@public/images/autoave-app-2.webp'
 import AppScreen3 from '@public/images/autoave-app-3.webp'
 import { APPSTORE_URL, PLAYSTORE_URL } from '@utils/contants/general'
+import MixpanelTracking from 'service/mixpanel'
+import { DOWNLOAD_CLICK } from '@utils/contants/tracking_events'
 
 export default function TopCTA(){
+    const handleDownload = () => {
+        MixpanelTracking.track(DOWNLOAD_CLICK, {
+            "Download Type": "App Store - Page Top"
+        })
+    }
     return (
         <>
             <BgImage imgsrc={background} imgalt={"Car Wash Background"} className="cta-background" tintOpacity="0.65" priority={true}>
@@ -32,13 +39,13 @@ export default function TopCTA(){
             </BgImage>
             <div className="app-showcase flex items-center justify-center">
                 <div className="appimage image1">
-                    <Image src={AppScreen1} alt="Autoave App Screen" priority />
+                    <Image src={AppScreen1} alt="Autoave App Screen 1" priority />
                 </div>
                 <div className="appimage image2">
-                    <Image src={AppScreen2} alt="Autoave App Screen" priority />
+                    <Image src={AppScreen2} alt="Autoave App Screen 2" priority />
                 </div>
                 <div className="appimage image3">
-                    <Image src={AppScreen3} alt="Autoave App Screen" priority />
+                    <Image src={AppScreen3} alt="Autoave App Screen 3" priority />
                 </div>
             </div>
             <style jsx>{`
