@@ -15,7 +15,7 @@ export default class MixpanelTracking {
             throw new Error("MixpanelTracking is a singleton class and can only be instantiated once");
         }
         mixpanel.init(process.env.NEXT_PUBLIC_MIXPANEL_TOKEN, {
-            debug: false,
+            debug: true,
             ignore_dnt: true
         });
     }

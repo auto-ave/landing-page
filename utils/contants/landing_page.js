@@ -26,9 +26,10 @@ export const LANDING_WHY_US = [
     {
         'key': 'whyus3',
         'title': 'Customer Satisfaction',
-        'description': 'Our best in class feedback system makes the service provider work efficiently and accurately.',
+        'description': 'We help you find the most reliable Car Care Services around you. Ever facing any problem with anything? We are always there to listen.',
         'image': queuesImage,
         'icon': smileIcon,
         'marginTop': '0',
     },
 ]
+
