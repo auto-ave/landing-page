@@ -1,4 +1,5 @@
 export const SITE_URL = 'https://www.autoave.in/';
+export const DYNAMIC_LINK_URL = 'https://autoave.page.link/';
 export const PLAYSTORE_URL = 'https://play.google.com/store/apps/details?id=com.autoave.app';
 export const APPSTORE_URL = 'https://apps.apple.com/in/app/autoave-car-care-made-simple/id1603915477';
 

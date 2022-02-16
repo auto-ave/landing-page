@@ -11,9 +11,12 @@ function MyApp({ Component, pageProps }) {
     const router = useRouter();
 
     useEffect(() => {
-        const handleRouteChange = (url) => {
-            var mixpanel = MixpanelTracking.getInstance();
-            mixpanel.track(PAGE_VIEW)
+        const handleRouteChange = (url, data) => {
+            if(!data.shallow){
+                console.log('inside handleRouteChange', data);
+                var mixpanel = MixpanelTracking.getInstance();
+                mixpanel.track(PAGE_VIEW)
+            }
         };
         router.events.on('routeChangeComplete', handleRouteChange);
         return () => {
@@ -22,6 +25,7 @@ function MyApp({ Component, pageProps }) {
     }, [router.events])
 
     useEffect(() => {
+        console.log('calling mixpanel tracking');
         var mixpanel = MixpanelTracking.getInstance();
         mixpanel.track(PAGE_VIEW)
     }, [])
