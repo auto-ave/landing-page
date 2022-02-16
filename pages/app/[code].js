@@ -9,6 +9,9 @@ export default function AppDownloadDynamicRoute() {
     useEffect(() => {
         if(code){
             window.location.href = DYNAMIC_LINK_URL + code
+            setTimeout(() => {
+                window.location.href = '/'
+            }, 1500)
         }
     }, [code]);
     return (
