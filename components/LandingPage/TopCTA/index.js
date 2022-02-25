@@ -2,6 +2,7 @@ import Image from 'next/image'
 import BgImage from '@components/Custom/BgImage'
 
 import background from '@public/images/cta-background.webp'
+import mobileBackground from '@public/images/cta-background-mobile.webp'
 import PlayStoreBadge from '@public/images/play-store-badge.png'
 import AppStoreBadge from '@public/images/app-store-badge.png'
 import AppScreen1 from '@public/images/autoave-app-1.webp'
@@ -11,7 +12,8 @@ import { APPSTORE_URL, PLAYSTORE_URL } from '@utils/contants/general'
 import MixpanelTracking from 'service/mixpanel'
 import { DOWNLOAD_CLICK } from '@utils/contants/tracking_events'
 
-export default function TopCTA(){
+export default function TopCTA(props){
+    const { deviceType } = props
     const handleDownload = (type) => {
         MixpanelTracking.getInstance().track(DOWNLOAD_CLICK, {
             "Download Type": type
@@ -19,7 +21,15 @@ export default function TopCTA(){
     }
     return (
         <>
-            <BgImage imgsrc={background} imgalt={"Car Wash Background"} className="cta-background" tintOpacity="0.65" priority={true}>
+            <BgImage 
+                imgsrc={background} 
+                mobileImgsrc={mobileBackground} 
+                imgalt={"Car Wash Background"} 
+                className="cta-background" 
+                tintOpacity="0.65" 
+                priority={true} 
+                deviceType={deviceType}
+            >
                 <div className="container px-5 py-32 md:py-48 text-center">
                     <h1 className="text-white text-3xl md:text-5xl lg:text-7xl max-w-4xl mx-auto mb-3">
                         Giving your vehicle the <span className='text-secondary'>love</span> it deserves

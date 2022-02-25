@@ -18,8 +18,22 @@ import { FACEBOOK_APP_ID, FACEBOOK_URL, INSTAGRAM_URL, LINKEDIN_URL, SITE_DESCRI
 
 import { NextSeo } from "next-seo";
 import { SocialProfileJsonLd } from 'next-seo';
+import device_types from "@utils/contants/device_types";
 
-export default function Home() {
+export async function getServerSideProps(context) {
+    const UA = context.req.headers['user-agent'];
+    const isMobile = Boolean(UA.match(
+        /Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
+    ))
+
+    return {
+        props: {
+            deviceType: isMobile ? device_types.MOBILE : device_types.DESKTOP
+        }
+    }
+}
+
+export default function Home({ deviceType }) {
     return (
         <>
             <NextSeo
@@ -62,7 +76,7 @@ export default function Home() {
             />
             <LandingNavbar />
             <div className="content">
-                <TopCTA />
+                <TopCTA deviceType={deviceType} />
                 <AboutUs />
                 <WhyUs />
                 <RegisterStore />

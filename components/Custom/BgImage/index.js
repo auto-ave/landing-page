@@ -1,3 +1,4 @@
+import device_types from "@utils/contants/device_types"
 import Image from "next/image"
 
 /**
@@ -28,22 +29,33 @@ const BgImage = ({
     children,
     imgalt = 'Background Image',
     imgsrc,
+    mobileImgsrc = "",
     justifyContent = 'center',
     width = '100%',
     tintOpacity = "0",
     priority = false,
     borderRadius = "0px",
+    deviceType,
 }) => {
-
     return (
         <div className="outer-container">
-            <Image
-                alt={imgalt}
-                src={imgsrc}
-                layout="fill"
-                objectFit="cover"
-                priority={priority}
-            />
+            { ( deviceType && deviceType == device_types.MOBILE && mobileImgsrc ) ?
+                <Image
+                    alt={imgalt}
+                    src={mobileImgsrc}
+                    layout="fill"
+                    objectFit="cover"
+                    priority={priority}
+                />
+                :
+                    <Image
+                        alt={imgalt}
+                        src={imgsrc}
+                        layout="fill"
+                        objectFit="cover"
+                        priority={priority}
+                    />
+            }
             {children &&
                 <div className="inner-container">
                     {children}
