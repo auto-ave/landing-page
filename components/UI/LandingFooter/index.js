@@ -44,7 +44,7 @@ export default function LandingFooter() {
                     <div className='py-5'>
                         <div className="flex flex-row justify-between items-center">
                             <div>
-                                &copy;2021 Autoave Private Limited. All rights reserved
+                                &copy;2022 Autoave Private Limited. All rights reserved
                             </div>
                             <div className="flex">
                                 <a href={INSTAGRAM_URL} target="_blank" rel="me noreferrer" className='footer-icon'>

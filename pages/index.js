@@ -1,11 +1,19 @@
-import AboutUs from "@components/LandingPage/AboutUs";
-import ContactUs from "@components/LandingPage/ContactUs";
-import GetTheApp from "@components/LandingPage/GetTheApp";
-import RegisterStore from "@components/LandingPage/RegisterStore";
 import TopCTA from "@components/LandingPage/TopCTA";
-import WhyUs from "@components/LandingPage/WhyUs";
+// import AboutUs from "@components/LandingPage/AboutUs";
+// import ContactUs from "@components/LandingPage/ContactUs";
+// import GetTheApp from "@components/LandingPage/GetTheApp";
+// import RegisterStore from "@components/LandingPage/RegisterStore";
+// import WhyUs from "@components/LandingPage/WhyUs";
 import LandingFooter from "@components/UI/LandingFooter";
 import LandingNavbar from "@components/UI/LandingNavbar";
+
+import dynamic from 'next/dynamic'
+const WhyUs = dynamic(() => import('@components/LandingPage/WhyUs'))
+const RegisterStore = dynamic(() => import('@components/LandingPage/RegisterStore'))
+const GetTheApp = dynamic(() => import('@components/LandingPage/GetTheApp'))
+const ContactUs = dynamic(() => import('@components/LandingPage/ContactUs'))
+const AboutUs = dynamic(() => import('@components/LandingPage/AboutUs'))
+
 import { FACEBOOK_APP_ID, FACEBOOK_URL, INSTAGRAM_URL, LINKEDIN_URL, SITE_DESCRIPTION, SITE_URL } from "@utils/contants/general";
 
 import { NextSeo } from "next-seo";

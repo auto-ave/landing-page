@@ -7,6 +7,11 @@ import { useRouter } from 'next/dist/client/router';
 import MixpanelTracking from 'service/mixpanel';
 import { PAGE_VIEW } from '@utils/contants/tracking_events';
 
+// Performance Metrics logging
+// export function reportWebVitals(metric) {
+//     console.log(metric)
+// }
+
 function MyApp({ Component, pageProps }) {
     const router = useRouter();
 
