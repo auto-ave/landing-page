@@ -2,25 +2,29 @@ import LandingContactUs from "@components/LandingPage/ContactUs";
 import LandingFooter from "@components/UI/LandingFooter";
 import Navbar from "@components/UI/LandingNavbar";
 import { FACEBOOK_APP_ID, FACEBOOK_URL, INSTAGRAM_URL, LINKEDIN_URL, SITE_URL } from "@utils/contants/general";
+import LOCALISATION_DATA from "@utils/localisation";
 
+import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
 import { SocialProfileJsonLd } from 'next-seo';
 
 
 export default function RefundPolicy() {
+    const router = useRouter()
+    const locale = router.locale ? router.locale : "en-US";
     return (
         <>
             <NextSeo
                 title="Refund Policy - Autoave"
                 description="Refund Policy for Consumers at Autoave - Simplifying the way you take care of your car."
-                canonical="https://www.autoave.in/consumer/refund-policy"
+                canonical={`${LOCALISATION_DATA[locale].domain}/consumer/refund-policy`}
                 openGraph={{
-                    url: 'https://www.autoave.in/consumer/refund-policy',
+                    url: `${LOCALISATION_DATA[locale].domain}/consumer/refund-policy`,
                     title: 'Refund Policy - Autoave',
                     description: 'Refund Policy for Consumers at Autoave - Simplifying the way you take care of your car.',
                     images: [
                         {
-                            url: 'https://www.autoave.in/autoave-banner.jpg',
+                            url: `${LOCALISATION_DATA[locale].domain}/autoave-banner.jpg`,
                             width: 1200,
                             height: 628,
                             alt: 'Autoave Banner',

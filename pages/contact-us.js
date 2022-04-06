@@ -2,25 +2,29 @@ import LandingContactUs from "@components/LandingPage/ContactUs";
 import LandingFooter from "@components/UI/LandingFooter";
 import Navbar from "@components/UI/LandingNavbar";
 import { FACEBOOK_APP_ID, FACEBOOK_URL, INSTAGRAM_URL, LINKEDIN_URL, SITE_URL } from "@utils/contants/general";
+import LOCALISATION_DATA from "@utils/localisation";
 
 import { NextSeo } from "next-seo";
 import { SocialProfileJsonLd } from 'next-seo';
+import { useRouter } from "next/router";
 
 
 export default function ContactUs(){
+    const router = useRouter()
+    const locale = router.locale ? router.locale : "en-US";
     return (
         <>
             <NextSeo
                 title="Contact Us | Autoave - Car care made simple"
                 description="Contact Us at Autoave - Simplifying the way you take care of your car."
-                canonical="https://www.autoave.in/contact-us"
+                canonical={`${LOCALISATION_DATA[locale].domain}/contact-us`}
                 openGraph={{
-                    url: 'https://www.autoave.in/contact-us',
+                    url: `${LOCALISATION_DATA[locale].domain}/contact-us`,
                     title: 'Contact Us | Autoave - Car care made simple',
                     description: 'Contact Us at Autoave - Simplifying the way you take care of your car.',
                     images: [
                         {
-                            url: 'https://www.autoave.in/autoave-banner.jpg',
+                            url: `${LOCALISATION_DATA[locale].domain}/autoave-banner.jpg`,
                             width: 1200,
                             height: 628,
                             alt: 'Autoave Banner',

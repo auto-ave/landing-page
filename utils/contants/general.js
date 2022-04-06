@@ -13,4 +13,4 @@ export const API_CONTACT = "https://api.autoave.in/contact/"
 
 export const FACEBOOK_APP_ID = '564259118703196';
 
-export const SITE_DESCRIPTION = "India's only platform where you can choose between various stores and services to find what's best for your car.";
+export const SITE_DESCRIPTION = (country = "India") => `${country}'s only platform where you can choose between various stores and services to find what's best for your car.`;

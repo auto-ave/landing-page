@@ -3,8 +3,15 @@ import Image from 'next/image'
 import scene from '@public/images/bangalore-scene.webp'
 import BgImage from '@components/Custom/BgImage'
 import ContantUsForm from '@components/Forms/ContactUsform'
+import { useRouter } from 'next/router'
+import localisation from '@utils/localisation'
 
 export default function LandingContactUs(){
+    const router = useRouter()
+
+    const locale = router.locale ? router.locale : 'en-US'
+    console.log("locale: ", locale)
+
     return (
         <>
             <div className="outer-container">
@@ -15,18 +22,18 @@ export default function LandingContactUs(){
                                 <BgImage imgsrc={scene} imgalt="Autoave Logo" borderRadius="8px">
                                     <div className='pt-52'>
                                         <h3 className='text-white text-3xl p-5 tracking-tight'>
-                                            Proudly serving in Bangalore
+                                            {localisation[locale].service_location_text}
                                         </h3>
                                     </div>
                                 </BgImage>
                             </div>
                             <div className='p-3'>
-                                <h3 className='mb-4 text-xl'> AUTOAVE PRIVATE LIMITED</h3>
+                                <h3 className='mb-4 text-xl'>AUTOAVE PRIVATE LIMITED</h3>
                                 <p className='mb-3'>
-                                    No-42 ,4th Main, NGEF Layout, Postal Colony, Sanjaynagar,  Bangalore, Karnataka-560094
+                                    {localisation[locale].address}
                                 </p>
                                 <p>
-                                    Email: <a href="mailto:care@autoave.in">care@autoave.in</a>
+                                    Email: <a href={`mailto:${localisation[locale].email}`}>{localisation[locale].email}</a>
                                 </p>
 
                             </div>

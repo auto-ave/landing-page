@@ -6,8 +6,12 @@ import PlayStoreBadge from '@public/images/play-store-badge.png'
 import AppStoreBadge from '@public/images/app-store-badge.png'
 import MixpanelTracking from "service/mixpanel"
 import { DOWNLOAD_CLICK } from '@utils/contants/tracking_events'
+import { useRouter } from "next/router"
+import LOCALISATION_DATA from "@utils/localisation"
 
 export default function GetTheApp(){
+    const router = useRouter()
+    const locale = router.locale ? router.locale : 'en-US'
     const handleDownload = (type) => {
         MixpanelTracking.getInstance().track(DOWNLOAD_CLICK, {
             "Download Type": type
@@ -24,7 +28,7 @@ export default function GetTheApp(){
                                     Car Care made simple
                                 </h3>
                                 <p className="text-white">
-                                    India&apos;s only platform where you can choose between various stores and services 
+                                    {LOCALISATION_DATA[locale].country}&apos;s only platform where you can choose between various stores and services 
                                     to find what&apos;s best for your car. See pricing, images, reviews, and ratings before 
                                     selecting the best service store for your vehicle.
                                 </p>

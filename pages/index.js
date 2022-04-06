@@ -19,6 +19,8 @@ import { FACEBOOK_APP_ID, FACEBOOK_URL, INSTAGRAM_URL, LINKEDIN_URL, SITE_DESCRI
 import { NextSeo } from "next-seo";
 import { SocialProfileJsonLd } from 'next-seo';
 import device_types from "@utils/contants/device_types";
+import { useRouter } from "next/router";
+import LOCALISATION_DATA from "@utils/localisation";
 
 export async function getServerSideProps(context) {
     const UA = context.req.headers['user-agent'];
@@ -34,20 +36,22 @@ export async function getServerSideProps(context) {
 }
 
 export default function Home({ deviceType }) {
+    const router = useRouter()
+    const locale = router.locale ? router.locale : "en-US";
     return (
         <>
             <NextSeo
                 title="Autoave - Online Car Care Service Booking"
-                description={SITE_DESCRIPTION}
+                description={SITE_DESCRIPTION(LOCALISATION_DATA[locale].country)}
                 tags="Autoave, Car Care"
                 canonical={SITE_URL}
                 openGraph={{
                     url: SITE_URL,
                     title: 'Autoave - Online Car Care Service Booking',
-                    description: SITE_DESCRIPTION,
+                    description: SITE_DESCRIPTION(LOCALISATION_DATA[locale].country),
                     images: [
                         {
-                            url: 'https://www.autoave.in/autoave-banner.jpg',
+                            url: `${LOCALISATION_DATA[locale].domain}/autoave-banner.jpg`,
                             width: 1200,
                             height: 628,
                             alt: 'Autoave Banner',

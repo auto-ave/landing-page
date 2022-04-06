@@ -1,7 +1,11 @@
 import VehicleWashImage from '@public/images/vehicle-wash-1.webp';
+import LOCALISATION_DATA from '@utils/localisation';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 export default function AboutUs(){
+    const router = useRouter()
+    const locale = router.locale ? router.locale : 'en-US'
     return (
         <>
             <div className="container max-w-7xl p-5 mb-5 md:mb-32">
@@ -13,7 +17,7 @@ export default function AboutUs(){
                             On <span className="text-primary">Demand!</span>
                         </h2>
                         <p className="max-w-lg">
-                            India&apos;s only platform where you can choose between various stores and 
+                            {LOCALISATION_DATA[locale].country}&apos;s only platform where you can choose between various stores and 
                             services to find what&apos;s best for your car. See pricing, images, 
                             reviews, and ratings on our app before selecting the best service store for 
                             your vehicle.

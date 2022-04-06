@@ -6,6 +6,7 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/dist/client/router';
 import MixpanelTracking from 'service/mixpanel';
 import { PAGE_VIEW } from '@utils/contants/tracking_events';
+import LOCALISATION_DATA from '@utils/localisation';
 
 // Performance Metrics logging
 // export function reportWebVitals(metric) {
@@ -14,6 +15,7 @@ import { PAGE_VIEW } from '@utils/contants/tracking_events';
 
 function MyApp({ Component, pageProps }) {
     const router = useRouter();
+    const locale = router.locale ? router.locale : 'en-US';
 
     useEffect(() => {
         const handleRouteChange = (url, data) => {
@@ -41,7 +43,7 @@ function MyApp({ Component, pageProps }) {
                 openGraph={{
                     type: 'website',
                     locale: 'en_IN',
-                    url: 'https://www.autoave.in/',
+                    url: LOCALISATION_DATA[locale].domain,
                     site_name: 'Autoave',
                 }}
                 twitter={{

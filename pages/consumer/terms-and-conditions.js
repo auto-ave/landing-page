@@ -2,25 +2,28 @@ import LandingContactUs from "@components/LandingPage/ContactUs";
 import LandingFooter from "@components/UI/LandingFooter";
 import Navbar from "@components/UI/LandingNavbar";
 import { FACEBOOK_APP_ID, FACEBOOK_URL, INSTAGRAM_URL, LINKEDIN_URL, SITE_URL } from "@utils/contants/general";
+import LOCALISATION_DATA from "@utils/localisation";
 
 import { NextSeo } from "next-seo";
 import { SocialProfileJsonLd } from 'next-seo';
-
+import { useRouter } from 'next/router'
 
 export default function ConsumerTermsAndConditions() {
+    const router = useRouter();
+    const locale = router.locale ? router.locale : 'en-US';
     return (
         <>
             <NextSeo
                 title="Terms and Conditions - Autoave"
                 description="Consumers Terms and Conditions at Autoave - Simplifying the way you take care of your car."
-                canonical="https://www.autoave.in/consumer/terms-and-conditions"
+                canonical={`${LOCALISATION_DATA[locale].domain}/consumer/terms-and-conditions`}
                 openGraph={{
-                    url: "https://www.autoave.in/consumer/terms-and-conditions",
+                    url: `${LOCALISATION_DATA[locale].domain}/consumer/terms-and-conditions`,
                     title: "Terms and Conditions - Autoave",
                     description: "Consumers Terms and Conditions at Autoave - Simplifying the way you take care of your car.",
                     images: [
                         {
-                            url: "https://www.autoave.in/autoave-banner.jpg",
+                            url: `${LOCALISATION_DATA[locale].domain}/autoave-banner.jpg`,
                             width: 1200,
                             height: 628,
                             alt: "Autoave Banner",
@@ -71,7 +74,7 @@ export default function ConsumerTermsAndConditions() {
                     <li>Device: any internet connected device such as a phone, tablet, computer or any other device that can be used to visit Autoave and use the services.</li>
                     <li>Service: refers to the service provided by Autoave as described in the relative terms (if available) and on this platform.</li>
                     <li>Third-party service: refers to advertisers, contest sponsors, promotional and marketing partners, and others who provide our content or whose products or services we think may interest you.</li>
-                    <li>Website: Autoave&apos;s site, which can be accessed via this URL: https://autoave.in/</li>
+                    <li>Website: Autoave&apos;s site, which can be accessed via this URL: {LOCALISATION_DATA[locale].domain}</li>
                     <li>You: a person or entity that is registered with Autoave to use the Services.</li>
                 </ul>
 
@@ -164,13 +167,13 @@ export default function ConsumerTermsAndConditions() {
                 <p>The website/app and its entire contents, features and functionality (including but not limited to all information, software, text, displays, images, video and audio, and the design, selection and arrangement thereof), are owned by Autoave, its licensors or other providers of such material and are protected by IN and international copyright, trademark, patent, trade secret and other intellectual property or proprietary rights laws. The material may not be copied, modified, reproduced, downloaded or distributed in any way, in whole or in part, without the express prior written permission of Autoave, unless and except as is expressly provided in these Terms &amp; Conditions. Any unauthorized use of the material is prohibited.</p>
 
                 <h1>Agreement to Arbitrate</h1>
-                <p>This section applies to any dispute EXCEPT IT DOESN’T INCLUDE A DISPUTE RELATING TO CLAIMS FOR INJUNCTIVE OR EQUITABLE RELIEF REGARDING THE ENFORCEMENT OR VALIDITY OF YOUR OR Autoave&apos;s INTELLECTUAL PROPERTY RIGHTS. The term “dispute” means any dispute, action, or other controversy between you and Autoave concerning the Services or this agreement, whether in contract, warranty, tort, statute, regulation, ordinance, or any other legal or equitable basis. “Dispute” will be given the broadest possible meaning allowable under law.</p>
+                <p>This section applies to any dispute EXCEPT IT DOESN&apos;T INCLUDE A DISPUTE RELATING TO CLAIMS FOR INJUNCTIVE OR EQUITABLE RELIEF REGARDING THE ENFORCEMENT OR VALIDITY OF YOUR OR Autoave&apos;s INTELLECTUAL PROPERTY RIGHTS. The term “dispute” means any dispute, action, or other controversy between you and Autoave concerning the Services or this agreement, whether in contract, warranty, tort, statute, regulation, ordinance, or any other legal or equitable basis. “Dispute” will be given the broadest possible meaning allowable under law.</p>
 
                 <h1>Notice of Dispute</h1>
-                <p>In the event of a dispute, you or Autoave must give the other a Notice of Dispute, which is a written statement that sets forth the name, address, and contact information of the party giving it, the facts giving rise to the dispute, and the relief requested. You must send any Notice of Dispute via email to: <a href="mailto:care@autoave.in" >care@autoave.in</a> Autoave will send any Notice of Dispute to you by mail to your address if we have it, or otherwise to your email address. You and Autoave will attempt to resolve any dispute through informal negotiation within sixty (60) days from the date the Notice of Dispute is sent. After sixty (60) days, you or Autoave may commence arbitration.</p>
+                <p>In the event of a dispute, you or Autoave must give the other a Notice of Dispute, which is a written statement that sets forth the name, address, and contact information of the party giving it, the facts giving rise to the dispute, and the relief requested. You must send any Notice of Dispute via email to: <a href={`mailto:${LOCALISATION_DATA[locale].email}`}>{LOCALISATION_DATA[locale].email}</a> Autoave will send any Notice of Dispute to you by mail to your address if we have it, or otherwise to your email address. You and Autoave will attempt to resolve any dispute through informal negotiation within sixty (60) days from the date the Notice of Dispute is sent. After sixty (60) days, you or Autoave may commence arbitration.</p>
 
                 <h1>Binding Arbitration</h1>
-                <p>If you and Autoave don’t resolve any dispute by informal negotiation, any other effort to resolve the dispute will be conducted exclusively by binding arbitration as described in this section. You are giving up the right to litigate (or participate in as a party or class member) all disputes in court before a judge or jury. The dispute shall be settled by binding arbitration in accordance with the commercial arbitration rules of the American Arbitration Association. Either party may seek any interim or preliminary injunctive relief from any court of competent jurisdiction, as necessary to protect the party’s rights or property pending the completion of arbitration. Any and all legal, accounting, and other costs, fees, and expenses incurred by the prevailing party shall be borne by the non-prevailing party.</p>
+                <p>If you and Autoave don&apos;t resolve any dispute by informal negotiation, any other effort to resolve the dispute will be conducted exclusively by binding arbitration as described in this section. You are giving up the right to litigate (or participate in as a party or class member) all disputes in court before a judge or jury. The dispute shall be settled by binding arbitration in accordance with the commercial arbitration rules of the American Arbitration Association. Either party may seek any interim or preliminary injunctive relief from any court of competent jurisdiction, as necessary to protect the party’s rights or property pending the completion of arbitration. Any and all legal, accounting, and other costs, fees, and expenses incurred by the prevailing party shall be borne by the non-prevailing party.</p>
 
                 <h1>Submissions and Privacy</h1>
                 <p>In the event that you submit or post any ideas, creative suggestions, designs, photographs, information, advertisements, data or proposals, including ideas for new or improved products, services, features, technologies or promotions, you expressly agree that such submissions will automatically be treated as non-confidential and non-proprietary and will become the sole property of Autoave without any compensation or credit to you whatsoever. Autoave and its affiliates shall have no obligations with respect to such submissions or posts and may use the ideas contained in such submissions or posts for any purposes in any medium in perpetuity, including, but not limited to, developing, manufacturing, and marketing products and services using such ideas.</p>
@@ -193,7 +196,7 @@ export default function ConsumerTermsAndConditions() {
 
                 <h1>Contact Us</h1>
                 <p>Don&apos;t hesitate to contact us if you have any questions.</p>
-                <ul><li>Via Email:  <a href="mailto:care@autoave.in" >care@autoave.in</a></li>
+                <ul><li>Via Email:  <a href={`mailto:${LOCALISATION_DATA[locale].email}`}>{LOCALISATION_DATA[locale].email}</a></li>
                 </ul>
             </div>
             <LandingContactUs />

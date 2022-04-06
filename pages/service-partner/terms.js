@@ -2,25 +2,29 @@ import LandingContactUs from "@components/LandingPage/ContactUs";
 import LandingFooter from "@components/UI/LandingFooter";
 import Navbar from "@components/UI/LandingNavbar";
 import { FACEBOOK_APP_ID, FACEBOOK_URL, INSTAGRAM_URL, LINKEDIN_URL, SITE_URL } from "@utils/contants/general";
+import LOCALISATION_DATA from "@utils/localisation";
 
 import { NextSeo } from "next-seo";
 import { SocialProfileJsonLd } from 'next-seo';
+import { useRouter } from "next/router";
 
 
 export default function PartnerTermsAndConditions() {
+    const router = useRouter()
+    const locale = router.locale ? router.locale : "en-US";
     return (
         <>
             <NextSeo
                 title="Terms and Conditions - Service Partner"
                 description="Service Partner's Terms and Conditions at Autoave - Simplifying the way you take care of your car."
-                canonical="https://www.autoave.in/service-partner/terms"
+                canonical={`${LOCALISATION_DATA[locale].domain}/service-partner/terms`}
                 openGraph={{
-                    url: "https://www.autoave.in/service-partner/terms",
+                    url: `${LOCALISATION_DATA[locale].domain}/service-partner/terms`,
                     title: "Partner - Terms and Conditions",
                     description: "Service Partner's Terms and Conditions at Autoave - Simplifying the way you take care of your car.",
                     images: [
                         {
-                            url: "https://www.autoave.in/autoave-banner.jpg",
+                            url: `${LOCALISATION_DATA[locale].domain}/autoave-banner.jpg`,
                             width: 1200,
                             height: 628,
                             alt: "Autoave Banner",
@@ -59,7 +63,7 @@ export default function PartnerTermsAndConditions() {
                 <li> &quot;Commission&quot; means the amount payable by the Service Partner to Autoave, being a % of Net Sales as set out in the Form.</li>
                 <li> &quot;Form&quot; means the Service Partner Enrolment Form for Online Booking Services executed by the Service Partner</li>
                 <li> &quot;Service Partner&quot; means the entity/ individual being the legal owner of the Vehicular Service Store as mentioned in the Form.</li>
-                <li> &quot;Website&quot; means www.autoave.in (including the webpages contained or hyperlinked therein and owned or controlled by Autoave), and such other media or media channels, devices, mobile applications, software, or technologies as Autoave may choose from time to time.</li>
+                <li> &quot;Website&quot; means {LOCALISATION_DATA[locale].domain} (including the webpages contained or hyperlinked therein and owned or controlled by Autoave), and such other media or media channels, devices, mobile applications, software, or technologies as Autoave may choose from time to time.</li>
                 
                 <h1 className="my-1 text-xl">Autoave&apos;s Obligations:</h1>
                 <li> Autoave will list Service Partner&apos;s services and the price list on the Platform.</li>

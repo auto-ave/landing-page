@@ -2,25 +2,29 @@ import LandingContactUs from "@components/LandingPage/ContactUs";
 import LandingFooter from "@components/UI/LandingFooter";
 import Navbar from "@components/UI/LandingNavbar";
 import { FACEBOOK_APP_ID, FACEBOOK_URL, INSTAGRAM_URL, LINKEDIN_URL, SITE_URL } from "@utils/contants/general";
+import LOCALISATION_DATA from "@utils/localisation";
 
 import { NextSeo } from "next-seo";
 import { SocialProfileJsonLd } from 'next-seo';
+import { useRouter } from "next/router";
 
 
 export default function CookiePolicy() {
+    const router = useRouter()
+    const locale = router.locale ? router.locale : 'en-US'
     return (
         <>
             <NextSeo
                 title="Cookie Policy - Autoave"
                 description="Cookie Policy for Consumers at Autoave - Simplifying the way you take care of your car."
-                canonical="https://www.autoave.in/consumer/cookie-policy"
+                canonical={`${LOCALISATION_DATA[locale].domain}/consumer/cookie-policy`}
                 openGraph={{
-                    url: 'https://www.autoave.in/consumer/cookie-policy',
+                    url: `${LOCALISATION_DATA[locale].domain}/consumer/cookie-policy`,
                     title: 'Cookie Policy - Autoave',
                     description: 'Cookie Policy for Consumers at Autoave - Simplifying the way you take care of your car.',
                     images: [
                         {
-                            url: 'https://www.autoave.in/autoave-banner.jpg',
+                            url: `${LOCALISATION_DATA[locale].domain}/autoave-banner.jpg`,
                             width: 1200,
                             height: 628,
                             alt: 'Autoave Banner',
@@ -61,11 +65,11 @@ export default function CookiePolicy() {
                     <li>Personal Data: any information that directly, indirectly, or in connection with other information — including a personal identification number — allows for the identification or identifiability of a natural person.</li>
                     <li>Service: refers to the service provided by Autoave as described in the relative terms (if available) and on this platform. </li>
                     <li>Third-party service: refers to advertisers, contest sponsors, promotional and marketing partners, and others who provide our content or whose products or services we think may interest you.</li>
-                    <li>Website:  site, which can be accessed via this URL: https://autoave.in/</li>
+                    <li>Website:  site, which can be accessed via this URL: {LOCALISATION_DATA[locale].domain}</li>
                 </ul>
 
                 <h1>Introduction</h1>
-                <p>This Cookie Policy explains how Autoave and its affiliates (collectively &apos;Autoave&apos;, &apos;we&apos;, &apos;us&apos;, and &apos;ours&apos;), use cookies and similar technologies to recognize you when you visit our website/app, including without limitation https://autoave.in/ and any related URLs, mobile or localized versions and related domains / sub-domains (&apos;Websites&apos;). It explains what these technologies are and why we use them, as well as the choices for how to control them.</p>
+                <p>This Cookie Policy explains how Autoave and its affiliates (collectively &apos;Autoave&apos;, &apos;we&apos;, &apos;us&apos;, and &apos;ours&apos;), use cookies and similar technologies to recognize you when you visit our website/app, including without limitation {LOCALISATION_DATA[locale].domain} and any related URLs, mobile or localized versions and related domains / sub-domains (&apos;Websites&apos;). It explains what these technologies are and why we use them, as well as the choices for how to control them.</p>
 
                 <h1>What is a cookie?</h1>
                 <p>A cookie is a small text file that is stored on your computer or other internet connected device in order to identify your browser, provide analytics, remember information about you such as your language preference or login information. They&apos;re completely safe and can&apos;t be used to run programs or deliver viruses to your device.</p>
@@ -115,7 +119,7 @@ export default function CookiePolicy() {
                 <p>By using our website/app, registering an account, or making a purchase, you hereby consent to our Cookie Policy and agree to its terms.</p>
                 <h1>Contact Us</h1>
                 <p>Don&apos;t hesitate to contact us if you have any questions regarding our Cookie Policy.</p>
-                <ul><li>Via Email:  <a href="mailto:care@autoave.in" >care@autoave.in</a></li>
+                <ul><li>Via Email:  <a href={`mailto:${LOCALISATION_DATA[locale].email}`}>{LOCALISATION_DATA[locale].email}</a></li>
                 </ul>
             </div>
             <LandingContactUs />
