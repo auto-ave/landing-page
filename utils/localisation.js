@@ -15,4 +15,13 @@ const LOCALISATION_DATA = {
     },
 }
 
+export const COUNTRY_TO_LOCALE = (country) => {
+    switch(country){
+        case 'Ireland':
+            return 'en-ie';
+        default:
+            return 'en-US';
+    }
+}
+
 export default LOCALISATION_DATA

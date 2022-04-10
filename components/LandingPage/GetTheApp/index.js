@@ -7,11 +7,16 @@ import AppStoreBadge from '@public/images/app-store-badge.png'
 import MixpanelTracking from "service/mixpanel"
 import { DOWNLOAD_CLICK } from '@utils/contants/tracking_events'
 import { useRouter } from "next/router"
-import LOCALISATION_DATA from "@utils/localisation"
+import LOCALISATION_DATA, { COUNTRY_TO_LOCALE } from "@utils/localisation"
+import useLocation from "@utils/useLocation"
 
 export default function GetTheApp(){
     const router = useRouter()
-    const locale = router.locale ? router.locale : 'en-US'
+
+    const location_data = useLocation()
+    const locale = COUNTRY_TO_LOCALE(location_data?.countryName)
+    console.log("locale: ", locale)
+
     const handleDownload = (type) => {
         MixpanelTracking.getInstance().track(DOWNLOAD_CLICK, {
             "Download Type": type

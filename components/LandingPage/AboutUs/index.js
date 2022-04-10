@@ -1,11 +1,16 @@
 import VehicleWashImage from '@public/images/vehicle-wash-1.webp';
-import LOCALISATION_DATA from '@utils/localisation';
+import LOCALISATION_DATA, { COUNTRY_TO_LOCALE } from "@utils/localisation"
+import useLocation from "@utils/useLocation"
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 export default function AboutUs(){
     const router = useRouter()
-    const locale = router.locale ? router.locale : 'en-US'
+    
+    const location_data = useLocation()
+    const locale = COUNTRY_TO_LOCALE(location_data?.countryName)
+    console.log("locale: ", locale)
+
     return (
         <>
             <div className="container max-w-7xl p-5 mb-5 md:mb-32">

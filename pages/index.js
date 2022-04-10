@@ -20,7 +20,8 @@ import { NextSeo } from "next-seo";
 import { SocialProfileJsonLd } from 'next-seo';
 import device_types from "@utils/contants/device_types";
 import { useRouter } from "next/router";
-import LOCALISATION_DATA from "@utils/localisation";
+import LOCALISATION_DATA, { COUNTRY_TO_LOCALE } from "@utils/localisation"
+import useLocation from "@utils/useLocation"
 
 export async function getServerSideProps(context) {
     const UA = context.req.headers['user-agent'];
@@ -37,7 +38,11 @@ export async function getServerSideProps(context) {
 
 export default function Home({ deviceType }) {
     const router = useRouter()
-    const locale = router.locale ? router.locale : "en-US";
+    
+    const location_data = useLocation()
+    const locale = COUNTRY_TO_LOCALE(location_data?.countryName)
+    console.log("locale: ", locale)
+
     return (
         <>
             <NextSeo
