@@ -3,7 +3,7 @@ import LandingFooter from "@components/UI/LandingFooter";
 import Navbar from "@components/UI/LandingNavbar";
 import { FACEBOOK_APP_ID, FACEBOOK_URL, INSTAGRAM_URL, LINKEDIN_URL, SITE_URL } from "@utils/contants/general";
 import LOCALISATION_DATA, { COUNTRY_TO_LOCALE } from "@utils/localisation"
-import useLocation from "@utils/useLocation"
+import useLocale from "@utils/useLocale";
 
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
@@ -13,9 +13,7 @@ import { SocialProfileJsonLd } from 'next-seo';
 export default function RefundPolicy() {
     const router = useRouter()
     
-    const location_data = useLocation()
-    const locale = COUNTRY_TO_LOCALE(location_data?.countryName)
-    console.log("locale: ", locale)
+    const { locale } = useLocale()
 
     return (
         <>

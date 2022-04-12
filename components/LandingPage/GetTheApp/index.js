@@ -6,16 +6,11 @@ import PlayStoreBadge from '@public/images/play-store-badge.png'
 import AppStoreBadge from '@public/images/app-store-badge.png'
 import MixpanelTracking from "service/mixpanel"
 import { DOWNLOAD_CLICK } from '@utils/contants/tracking_events'
-import { useRouter } from "next/router"
 import LOCALISATION_DATA, { COUNTRY_TO_LOCALE } from "@utils/localisation"
-import useLocation from "@utils/useLocation"
+import useLocale from "@utils/useLocale";
 
 export default function GetTheApp(){
-    const router = useRouter()
-
-    const location_data = useLocation()
-    const locale = COUNTRY_TO_LOCALE(location_data?.countryName)
-    console.log("locale: ", locale)
+    const { locale } = useLocale()
 
     const handleDownload = (type) => {
         MixpanelTracking.getInstance().track(DOWNLOAD_CLICK, {

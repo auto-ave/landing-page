@@ -7,7 +7,7 @@ import { useRouter } from 'next/dist/client/router';
 import MixpanelTracking from 'service/mixpanel';
 import { PAGE_VIEW } from '@utils/contants/tracking_events';
 import LOCALISATION_DATA, { COUNTRY_TO_LOCALE } from "@utils/localisation"
-import useLocation from "@utils/useLocation"
+import useLocale from "@utils/useLocale";
 
 // Performance Metrics logging
 // export function reportWebVitals(metric) {
@@ -17,9 +17,7 @@ import useLocation from "@utils/useLocation"
 function MyApp({ Component, pageProps }) {
     const router = useRouter();
     
-    const location_data = useLocation()
-    const locale = COUNTRY_TO_LOCALE(location_data?.countryName)
-    console.log("locale: ", locale)
+    const { locale } = useLocale()
 
     useEffect(() => {
         const handleRouteChange = (url, data) => {

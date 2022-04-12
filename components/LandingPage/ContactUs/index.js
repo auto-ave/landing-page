@@ -3,16 +3,11 @@ import React from 'react'
 import scene from '@public/images/bangalore-scene.webp'
 import BgImage from '@components/Custom/BgImage'
 import ContantUsForm from '@components/Forms/ContactUsform'
-import { useRouter } from 'next/router'
 import localisation, { COUNTRY_TO_LOCALE } from '@utils/localisation'
-import useLocation from '@utils/useLocation'
+import useLocale from "@utils/useLocale";
 
 export default function LandingContactUs(){
-    const router = useRouter()
-    const location_data = useLocation()
-
-    const locale = COUNTRY_TO_LOCALE(location_data?.countryName)
-    console.log("locale: ", locale)
+    const { locale } = useLocale()
 
     return (
         <>
