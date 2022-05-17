@@ -1,17 +1,22 @@
+import scene from '@public/images/bangalore-scene.webp'
+import scene2 from '@public/images/galway-scene.webp'
+
 const LOCALISATION_DATA = {
     "en-US": {
         address: "No-42 ,4th Main, NGEF Layout, Postal Colony, Sanjaynagar,  Bangalore, Karnataka-560094",
         email: "care@autoave.in",
         domain: "https://www.autoave.in",
         country: "India",
-        service_location_text: "Proudly serving in Bangalore"
+        service_location_text: "Proudly serving in Bangalore",
+        city_image: scene,
     },
     "en-ie": {
         address: "200 Rosan Glas, Rahoon Galway H91 A8XT",
         email: "care@autoave.ie",
         domain: "https://www.autoave.ie",
         country: "Ireland",
-        service_location_text: "Soon starting services in Galway"
+        service_location_text: "Soon starting services in Galway",
+        city_image: scene2,
     },
 }
 

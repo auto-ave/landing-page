@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import scene from '@public/images/bangalore-scene.webp'
+
 import BgImage from '@components/Custom/BgImage'
 import ContantUsForm from '@components/Forms/ContactUsform'
 import localisation, { COUNTRY_TO_LOCALE } from '@utils/localisation'
@@ -16,9 +16,9 @@ export default function LandingContactUs(){
                     <div className="md:flex flex-wrap items-center w-100">
                         <div className='flex-1 mb-4 md:mb-0'>
                             <div className='md:max-w-lg mb-5'>
-                                <BgImage imgsrc={scene} imgalt="Autoave Logo" borderRadius="8px">
+                                <BgImage imgsrc={localisation[locale].city_image} imgalt="Autoave Logo" borderRadius="8px">
                                     <div className='pt-52'>
-                                        <h3 className='text-white text-3xl p-5 tracking-tight'>
+                                        <h3 className='text-white text-3xl p-5 tracking-tight text-shadow'>
                                             {localisation[locale].service_location_text}
                                         </h3>
                                     </div>
