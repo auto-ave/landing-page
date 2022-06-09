@@ -38,3 +38,11 @@ h1, h2, h3, h4, h5, h6 {
     text-shadow: 0 2px 4px rgba(0,0,0);
 }
 
+.svg-background-lines {
+    z-index: 0;
+    position: absolute;
+    top: -50px;
+    height: 300px;
+    width: 100%;
+    background-color: transparent;
+}

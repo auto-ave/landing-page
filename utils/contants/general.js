@@ -10,6 +10,7 @@ export const LINKEDIN_URL = "https://www.linkedin.com/company/autoave";
 export const STORE_CONNECT_GOOGLE_FORM = "https://forms.gle/opHxkjHScfeYUUZZA"
 
 export const API_CONTACT = "https://api.autoave.in/contact/"
+export const API_TRANSPORT_ENQUIRY = "https://api.autoave.in/transport/enquiry/"
 
 export const FACEBOOK_APP_ID = '564259118703196';
 
