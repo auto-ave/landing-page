@@ -43,20 +43,20 @@ const HOW_IT_WORKS = [
 export const WHY_US = [
     {
         'key': 'whyus1',
-        'title': 'No more queues',
-        'description': 'Book services according to your schedule with zero wait time.',
+        'title': 'Affordable prices',
+        'description': 'Get the lowest prices available on the market.',
         'image': image4
     },
     {
         'key': 'whyus2',
         'title': 'Diverse Options',
-        'description': 'Choose from a variety of stores and services near you, select the store which suits you best.',
+        'description': 'Get qoutes from many verified movers and compare prices.',
         'image': image5
     },
     {
         'key': 'whyus3',
         'title': 'Customer Satisfaction',
-        'description': 'We help you find the most reliable Car Care Services around you. Ever facing any problem with anything? We are always there to listen.',
+        'description': 'Our best in class feedback system makes the service provider work efficiently and accurately.',
         'image': image6
     },
 ]
