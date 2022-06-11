@@ -29,18 +29,18 @@ export default function LandingFooter() {
                                 <a href={ROUTES.CAR_TRANSPORTATION_SERVICE} className="footer-item">
                                     Car Transportation Service
                                 </a>
-                                {/* <a href={ROUTES.COOKIES_POLICY} className="footer-item">
+                                <a href={ROUTES.COOKIES_POLICY} className="footer-item hidden">
                                     Cookie Policy
                                 </a>
-                                <a href={ROUTES.TERMS_AND_CONDITIONS} className="footer-item">
+                                <a href={ROUTES.TERMS_AND_CONDITIONS} className="footer-item hidden">
                                     Terms and Conditions
                                 </a>
-                                <a href={ROUTES.PRIVACY_POLICY} className="footer-item">
+                                <a href={ROUTES.PRIVACY_POLICY} className="footer-item hidden">
                                     Privacy Policy
                                 </a>
-                                <a href={ROUTES.REFUND_POLICY} className="footer-item">
+                                <a href={ROUTES.REFUND_POLICY} className="footer-item hidden">
                                     Refund Policy
-                                </a> */}
+                                </a>
                             </div>
                         </div>
                     </div>
