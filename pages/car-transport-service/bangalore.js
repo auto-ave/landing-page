@@ -18,6 +18,9 @@ import image5 from '@public/images/car-transport/trucks-lined-up.jpg'
 import image6 from '@public/images/car-transport/human-thumb.jpg'
 import background from '@public/images/car-transport/car-transport-background.jpg'
 import BgImage from "@components/Custom/BgImage";
+import BasicOverview from "@components/CarTransport/BasicOverview";
+import Features from "@components/CarTransport/Features";
+import GetTheApp from "@components/LandingPage/GetTheApp";
 
 const HOW_IT_WORKS = [
     {
@@ -65,6 +68,10 @@ export default function CarTransportService() {
     const router = useRouter()
 
     const { locale } = useLocale()
+
+    const goToTop = () => {
+        window.scrollTo(0, 0)
+    }
 
     return (
         <>
@@ -148,6 +155,9 @@ export default function CarTransportService() {
                             </div>
                         </div>
                     </BgImage>
+
+                    <BasicOverview />
+
                     {/* <div className="block lg:flex">
                         <div className="flex-1 py-0 md:py-32 px-4">
                             <div className="border py-8 px-4 md:p-12 max-w-xl mx-auto">
@@ -214,7 +224,7 @@ export default function CarTransportService() {
                             </h2>
                             <div className="block lg:flex">
                                 {HOW_IT_WORKS.map((item, index) =>
-                                    <div className="flex-1" key={item.key}>
+                                    <div className="flex-1 p-5" key={item.key}>
                                         <div className="max-w-xs mx-auto">
                                             <div className="mb-2">
                                                 <Image src={item.image} alt={item.title} />
@@ -235,6 +245,8 @@ export default function CarTransportService() {
 
                             </div>
                         </div>
+
+                        <Features />
 
                         <div className="container max-w-7xl px-5 py-6 lg:py-32">
                             <h2 className="text-3xl md:text-4xl lg:text-5xl mb-8 md:mb-2">
@@ -263,11 +275,22 @@ export default function CarTransportService() {
                                 })}
                             </div>
                             <div className="text-center">
-                                <div className="btn bg-primary text-white inline-block py-3 px-7 rounded cursor-pointer">
+                                <div className="btn bg-primary text-white inline-block py-3 px-7 rounded cursor-pointer" onClick={() => goToTop()}>
                                     Get your free quotation now!
                                 </div>
                             </div>
+
+                            
                         </div>
+                    </div>
+
+                    <div className="py-16">
+                        <div className="container max-w-7xl mx-auto">
+                            <h2 className="mb-6 lg:mb-16 text-3xl lg:text-5xl font-bold tracking-tighter">
+                                Need a Carwash?
+                            </h2>
+                        </div>
+                        <GetTheApp />
                     </div>
 
                     {/* <LandingContactUs /> */}

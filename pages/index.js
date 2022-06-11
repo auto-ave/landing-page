@@ -68,7 +68,7 @@ export default function Home({ deviceType }) {
                 }}
                 additionalMetaTags={[{
                     name: 'keywords',
-                    content: 'Autoave, Autoave app, Car Wash, Online, Booking, Book Car Wash, Car Care, Car Wash in Banglore'
+                    content: 'Car wash near me, Autoave, Autoave app, Car Wash, Online, Booking, Book Car Wash, Car Care, Car Wash in Banglore'
                 }]}
             />
             <SocialProfileJsonLd

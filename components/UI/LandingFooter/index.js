@@ -26,7 +26,10 @@ export default function LandingFooter() {
                                 <a href={ROUTES.CONTACT_US} className="footer-item">
                                     Contact Us
                                 </a>
-                                <a href={ROUTES.COOKIES_POLICY} className="footer-item">
+                                <a href={ROUTES.CAR_TRANSPORTATION_SERVICE} className="footer-item">
+                                    Car Transportation Service
+                                </a>
+                                {/* <a href={ROUTES.COOKIES_POLICY} className="footer-item">
                                     Cookie Policy
                                 </a>
                                 <a href={ROUTES.TERMS_AND_CONDITIONS} className="footer-item">
@@ -37,7 +40,7 @@ export default function LandingFooter() {
                                 </a>
                                 <a href={ROUTES.REFUND_POLICY} className="footer-item">
                                     Refund Policy
-                                </a>
+                                </a> */}
                             </div>
                         </div>
                     </div>

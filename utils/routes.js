@@ -2,6 +2,7 @@ const ROUTES = {
     HOME: '/',
     ABOUT_US: '/about-us',
     CONTACT_US: '/contact-us',
+    CAR_TRANSPORTATION_SERVICE: '/car-transport-service',
 
     REGISTER_STORE: '/partner/store-registration',
 

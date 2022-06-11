@@ -52,7 +52,6 @@ export default function CarTransportForm() {
         console.log(`To City: ${toCity}`);
         console.log(`Contact Number: ${contactNumber}`);
         console.log(`Name: ${name}`);
-
         axios.post(API_TRANSPORT_ENQUIRY, {
             from_city: fromCity,
             to_city: toCity,
@@ -81,7 +80,7 @@ export default function CarTransportForm() {
                             <label className="block tracking-wide text-white text-sm mb-2" htmlFor="grid-first-name">
                                 Shifting From
                             </label>
-                            <Select placeholder="Select City" options={city_options} type="text"  onChange={(option) => {setToCity(option.value)}} styles={customStyles} required />
+                            <Select placeholder="Select City" options={city_options} type="text"  onChange={(option) => {setToCity(option.value)}} styles={customStyles} isReq/>
                         </div>
                         <div className="px-3 text-left">
                             <label className="block tracking-wide text-white text-sm mb-2" htmlFor="grid-last-name">
@@ -99,7 +98,7 @@ export default function CarTransportForm() {
                             <label className="block tracking-wide text-white text-sm mb-2" htmlFor="grid-password">
                                 Contact Number
                             </label>
-                            <input className="appearance-none transition-all block w-full border rounded py-3 px-4 mb-3 leading-tight focus:bg-white focus:border-gray-500" id="grid-password" placeholder="Contact Number" value={contactNumber} onChange={(event) => setContactNumber(event.target.value)} required />
+                            <input className="appearance-none transition-all block w-full border rounded py-3 px-4 mb-3 leading-tight focus:bg-white focus:border-gray-500" id="grid-password" placeholder="Contact Number" value={contactNumber} onChange={(event) => setContactNumber(event.target.value)} type="number" required />
                         </div>
                         <div className="px-3 text-left">
                             <label className="block tracking-wide text-white text-sm mb-2" htmlFor="grid-password">

@@ -45,7 +45,7 @@ export default function GetTheApp(){
                                 </div>
                             </div>
                         </div>
-                        <div className="hidden lg:block">
+                        <div className="hidden lg:block scale-105">
                             <Image src={AppScreen1} alt="Autoave App Screen 1" height={369*2 + 100} width={279*2} />
                         </div>
                         <div className="hidden lg:block">
