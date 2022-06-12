@@ -5,6 +5,7 @@ import BgImage from '@components/Custom/BgImage'
 import ContantUsForm from '@components/Forms/ContactUsform'
 import localisation, { COUNTRY_TO_LOCALE } from '@utils/localisation'
 import useLocale from "@utils/useLocale";
+import Team from '../Team'
 
 export default function LandingContactUs(){
     const { locale } = useLocale()
@@ -30,9 +31,11 @@ export default function LandingContactUs(){
                                     {localisation[locale].address}
                                 </p>
                                 <p>
-                                    Email: <a href={`mailto:${localisation[locale].email}`}>{localisation[locale].email}</a>
+                                    Email: <a href={`mailto:${localisation[locale].email}`} className="font-bold">{localisation[locale].email}</a>
                                 </p>
-
+                                {/* <p>
+                                    PAN: AAWCA2056P
+                                </p> */}
                             </div>
                         </div>
                         <div className="flex-1 p-5 w-100">
@@ -43,6 +46,9 @@ export default function LandingContactUs(){
                                 <ContantUsForm />
                             </div>
                         </div>
+                    </div>
+                    <div>
+                        {/* <Team /> */}
                     </div>
                 </div>
             </div>
