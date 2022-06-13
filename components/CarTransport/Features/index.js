@@ -30,7 +30,7 @@ const FEATURES_DATA = [
 export default function Features() {
     return (
         <div>
-            <div className="relative container max-w-7xl py-16">
+            <div className="relative container max-w-7xl py-3 lg:py-16">
                 <div className="flex flex-wrap">
                     <div className="w-full lg:w-4/12 px-5 mb-4">
                         <h2 className="text-2xl lg:text-4xl font-bold">

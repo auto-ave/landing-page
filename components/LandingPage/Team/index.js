@@ -27,7 +27,7 @@ const TEAM_DATA = [
         'id': '4',
         'title': 'Jayesh Jaiswal',
         'image': image2,
-        'description': '',
+        'description': '', 
     },
 ]
 

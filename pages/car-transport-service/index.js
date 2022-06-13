@@ -21,6 +21,8 @@ import BgImage from "@components/Custom/BgImage";
 import BasicOverview from "@components/CarTransport/BasicOverview";
 import Features from "@components/CarTransport/Features";
 import GetTheApp from "@components/LandingPage/GetTheApp";
+import Content1 from "@components/CarTransport/Content1";
+import Content2 from "@components/CarTransport/Content2";
 
 const HOW_IT_WORKS = [
     {
@@ -53,7 +55,7 @@ export const WHY_US = [
     {
         'key': 'whyus2',
         'title': 'Diverse Options',
-        'description': 'Get qoutes from many verified movers and compare prices.',
+        'description': 'Get quotes from many verified movers and compare prices.',
         'image': image5
     },
     {
@@ -172,14 +174,14 @@ export default function CarTransportService() {
                         <div className="flex-1">
                             <div className="p-12 max-w-xl mx-auto">
                                 <h6 className="text-xl mb-5">
-                                    Fill this form to get a qoutation
+                                    Fill this form to get a quotation
                                 </h6>
                                 <CarTransportForm />
                             </div>
                         </div>
                     </div> */}
 
-                    <div className="relative py-12">
+                    <div className="relative py-5 lg:py-12">
                         <div className="svg-background-lines">
                             <svg viewBox="0 0 1440 668" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M-56.4559 176.716C49.6634 178.233 128.468 158.595 181.17 140.127C234.464 121.45 274.504 99.2201 341.444 91.5621C415.298 83.0036 460.377 94.2279 477.992 99.8095C502.411 107.557 500.145 111.042 539.402 127.373C614.813 158.746 631.994 149.585 664.817 168.757C719.24 200.54 694.038 238.579 747.814 288.498C786.754 324.66 856.409 357.09 927.08 345.853C993.631 335.267 1008.63 294.305 1076.47 294.705C1104.33 294.868 1126.11 302.413 1169.65 317.501C1225.46 336.765 1261.48 357.42 1276.06 364.86C1319.26 386.924 1392.26 405.14 1521.45 381.843" stroke="#f7fafc" strokeMiterlimit="10" />
@@ -222,10 +224,10 @@ export default function CarTransportService() {
                             <h2 className="mb-6 lg:mb-16 text-3xl lg:text-5xl font-bold tracking-tighter text-center">
                                 How it works?
                             </h2>
-                            <div className="block lg:flex">
+                            <div className="block lg:flex justify-between p-5">
                                 {HOW_IT_WORKS.map((item, index) =>
-                                    <div className="flex-1 p-5" key={item.key}>
-                                        <div className="max-w-xs mx-auto">
+                                    <div className="max-w-xs mb-5 text-center lg:text-left" key={item.key}>
+                                        <div className="">
                                             <div className="mb-2">
                                                 <Image src={item.image} alt={item.title} />
                                             </div>
@@ -246,7 +248,15 @@ export default function CarTransportService() {
                             </div>
                         </div>
 
+                        <div className="py-16">
+                            <Content1 />
+                        </div>
+
                         <Features />
+
+                        <div className="py-16">
+                            <Content2 />
+                        </div>
 
                         <div className="container max-w-7xl px-5 py-6 lg:py-32">
                             <h2 className="text-3xl md:text-4xl lg:text-5xl mb-8 md:mb-2">

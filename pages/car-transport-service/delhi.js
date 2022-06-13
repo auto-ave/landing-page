@@ -53,7 +53,7 @@ export const WHY_US = [
     {
         'key': 'whyus2',
         'title': 'Diverse Options',
-        'description': 'Get qoutes from many verified movers and compare prices.',
+        'description': 'Get quotes from many verified movers and compare prices.',
         'image': image5
     },
     {
@@ -172,7 +172,7 @@ export default function CarTransportService() {
                         <div className="flex-1">
                             <div className="p-12 max-w-xl mx-auto">
                                 <h6 className="text-xl mb-5">
-                                    Fill this form to get a qoutation
+                                    Fill this form to get a quotation
                                 </h6>
                                 <CarTransportForm />
                             </div>
