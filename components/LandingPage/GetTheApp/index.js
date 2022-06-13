@@ -8,8 +8,9 @@ import MixpanelTracking from "service/mixpanel"
 import { DOWNLOAD_CLICK } from '@utils/contants/tracking_events'
 import LOCALISATION_DATA, { COUNTRY_TO_LOCALE } from "@utils/localisation"
 import useLocale from "@utils/useLocale";
+import Link from "next/link"
 
-export default function GetTheApp(){
+export default function GetTheApp({ homepageRedirect }) {
     const { locale } = useLocale()
 
     const handleDownload = (type) => {
@@ -28,29 +29,44 @@ export default function GetTheApp(){
                                     Car Care made simple
                                 </h3>
                                 <p className="text-white">
-                                    {LOCALISATION_DATA[locale].country}&apos;s only platform where you can choose between various stores and services 
-                                    to find what&apos;s best for your car. See pricing, images, reviews, and ratings before 
+                                    {LOCALISATION_DATA[locale].country}&apos;s only platform where you can choose between various stores and services
+                                    to find what&apos;s best for your car. See pricing, images, reviews, and ratings before
                                     selecting the best service store for your vehicle.
                                 </p>
                             </div>
                             <div>
-                                <h5 className="text-white text-xl bold mb-2">Get the App</h5>
-                                <div className="flex">
-                                    <a href={PLAYSTORE_URL} className="mr-2" target="_blank" rel="noreferrer" onClick={() => handleDownload("Play Store - Page Bottom CTA")}>
-                                        <Image src={PlayStoreBadge} alt="Play Store Badge" priority />
-                                    </a>
-                                    <a href={APPSTORE_URL} className="ml-2" target="_blank" rel="noreferrer" onClick={() => handleDownload("App Store - Page Bottom CTA")}>
-                                        <Image src={AppStoreBadge} alt="App Store Badge" priority />
-                                    </a>
-                                </div>
+                                {homepageRedirect ?
+                                    <div>
+                                        <a href="/">
+                                            <div className="bg-white text-gray-800 font-bold px-6 py-3 inline-block rounded-lg">
+                                                Book Now
+                                            </div>
+                                        </a>
+                                    </div>
+                                    :
+                                    <>
+                                        <h5 className="text-white text-xl bold mb-2">Get the App</h5>
+                                        <div className="flex">
+                                            <a href={PLAYSTORE_URL} className="mr-2" target="_blank" rel="noreferrer" onClick={() => handleDownload("Play Store - Page Bottom CTA")}>
+                                                <Image src={PlayStoreBadge} alt="Play Store Badge" priority />
+                                            </a>
+                                            <a href={APPSTORE_URL} className="ml-2" target="_blank" rel="noreferrer" onClick={() => handleDownload("App Store - Page Bottom CTA")}>
+                                                <Image src={AppStoreBadge} alt="App Store Badge" priority />
+                                            </a>
+                                        </div>
+                                    </>
+                                }
                             </div>
                         </div>
-                        <div className="hidden lg:block scale-105">
-                            <Image src={AppScreen1} alt="Autoave App Screen 1" height={369*2 + 100} width={279*2} />
-                        </div>
-                        <div className="hidden lg:block">
-                            <Image src={AppScreen2} alt="Autoave App Screen 2" height={369*2 + 100} width={279*2} />
-                        </div>
+                        <>
+                            <div className="hidden lg:block scale-105">
+                                <Image src={AppScreen1} alt="Autoave App Screen 1" height={369 * 2 + 100} width={279 * 2} />
+                            </div>
+                            <div className="hidden lg:block">
+                                <Image src={AppScreen2} alt="Autoave App Screen 2" height={369 * 2 + 100} width={279 * 2} />
+                            </div>
+                        </>
+
                     </div>
                 </div>
             </div>

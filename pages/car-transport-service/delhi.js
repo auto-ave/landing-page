@@ -288,7 +288,7 @@ export default function CarTransportService() {
                                 Need a Carwash?
                             </h2>
                         </div>
-                        <GetTheApp />
+                        <GetTheApp homepageRedirect={true} />
                     </div>
 
                     {/* <LandingContactUs /> */}
