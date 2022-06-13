@@ -16,7 +16,7 @@ export default function Content1() {
                                 Autoave Transport involves outstanding organizational practices including team management in transporting products with uniform measurements and safety controls. Plus, Car Transport in Bangalore provides smooth transportation of all forms of trucks in good condition so that the transport is not interrupted anyhow on the way.
                             </p>
                             <p>
-                                Moreover, transportation is a tough event that may occur in your lifetime at any time. Plus, you may find it difficult to do all the jobs for yourself. Hence, you should head to the market to assist you with some transporting agencies. But you have to be careful to pick one of Bangalore's trustworthy transporters. It is also smart and seamless that we direct our clients to select the proper transporter to move their valuables. Each time we move to make your travel secure and timely with our professional workers.
+                                Moreover, transportation is a tough event that may occur in your lifetime at any time. Plus, you may find it difficult to do all the jobs for yourself. Hence, you should head to the market to assist you with some transporting agencies. But you have to be careful to pick one of Bangalore&apos;s trustworthy transporters. It is also smart and seamless that we direct our clients to select the proper transporter to move their valuables. Each time we move to make your travel secure and timely with our professional workers.
                             </p>
                         </div>
                     </div>
