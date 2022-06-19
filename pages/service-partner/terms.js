@@ -12,7 +12,6 @@ import { useRouter } from "next/router";
 
 export default function PartnerTermsAndConditions() {
     const { locale } = useLocale()
-    console.log("locale: ", locale)
 
     return (
         <>

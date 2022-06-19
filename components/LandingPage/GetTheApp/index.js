@@ -37,6 +37,7 @@ export default function GetTheApp({ homepageRedirect }) {
                             <div>
                                 {homepageRedirect ?
                                     <div>
+                                        {/* eslint-disable-next-line */}
                                         <a href="/">
                                             <div className="bg-white text-gray-800 font-bold px-6 py-3 inline-block rounded-lg">
                                                 Book Now
